@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final Librería | Libromanía</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>LIBROMANÍA</h1>
+    <p class="lema">Tu tienda de útiles escolares favorita</p>
+    <div class="header-social-links">
+    <a href="https://wa.me/50236589928" target="_blank" class="social-icon wa" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61589715330332" target="_blank" class="social-icon fb" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/_libromania/?hl=es" target="_blank" class="social-icon ig" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+    <div class="busqueda-contenedor">
+    <form action="#">
+        <input type="text" placeholder="¿Qué útil escolar buscas hoy?" name="search">
+        <button type="submit">🔍</button>
+    </form>
+</div>
+    <nav>
+        <ul>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#evidencias">Evidencias</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#" id="abrir-carrito">🛒 Carrito (<span id="contador-carrito">0</span>)</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main class="contenedor-productos">
+        <h2 style="text-align: center; margin-top: 20px;">Nuestros Útiles Escolares</h2>
+        
+        <section id="productos">
+    <!-- ESCRITURA Y DIBUJO -->
+    <article class="producto">
+        <h3>Caja de Lápices de Colores</h3>
+        <img src="img/crayones.jpg" alt="Pack de 24 lápices" width="200" loading="lazy" class="producto-img">
+        <p>Pack de 24 colores brillantes para dibujo artístico.</p>
+        <p class="precio">Q45.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Cuadernos Espirales</h3>
+        <img src="img/cuadernos.jpg" alt="Cuadernos espirales" width="200" loading="lazy" class="producto-img">
+        <p>Cuadernos de 100 hojas, cuadros o líneas.</p>
+        <p class="precio">Q18.50</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Lápices de Grafito (Docena)</h3>
+        <img src="img/colores.jpg" alt="Pack de colores" width="200" loading="lazy" class="producto-img">
+        <p>Pack de lápices variados para tareas artísticas.</p>
+        <p class="precio">Q22.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Marcadores (Set 12)</h3>
+        <img src="img/marcadores.jpg" alt="Set de marcadores" width="200" loading="lazy" class="producto-img">
+        <p>Marcadores de colores intensos para resaltar.</p>
+        <p class="precio">Q35.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Crayones de Cera</h3>
+        <img src="img/crayones.jpg" alt="Crayones de cera" width="200" loading="lazy" class="producto-img">
+        <p>Crayones resistentes para los más pequeños.</p>
+        <p class="precio">Q15.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Resaltadores Neón</h3>
+        <img src="img/resaltadores.jpg" alt="Set de resaltadores neón" width="200" loading="lazy" class="producto-img">
+        <p>Resaltadores para estudios y lectura.</p>
+        <p class="precio">Q28.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <!-- ÚTILES DE PRECISIÓN Y CORRECCIÓN -->
+    <article class="producto">
+        <h3>Juego de Geometría</h3>
+        <img src="img/set-de-geometria.jpg" alt="Set de Geometría" width="200" loading="lazy" class="producto-img">
+        <p>Ideal para matemáticas y dibujo técnico.</p>
+        <p class="precio">Q30.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Regla de Plástico</h3>
+        <img src="img/regla.jpg" alt="Regla graduada" width="200" loading="lazy" class="producto-img">
+        <p>Regla de 30cm de material duradero.</p>
+        <p class="precio">Q5.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Regla Metálica</h3>
+        <img src="img/regla-metalica.jpg" alt="Regla de acero" width="200" loading="lazy" class="producto-img">
+        <p>Acero inoxidable para mayor precisión.</p>
+        <p class="precio">Q12.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Compás de Precisión</h3>
+        <img src="img/compas.jpg" alt="Compás técnico" width="200" loading="lazy" class="producto-img">
+        <p>Para trazos de círculos perfectos.</p>
+        <p class="precio">Q25.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Borrador de Migajón</h3>
+        <img src="img/borrador.jpg" alt="Borrador" width="200" loading="lazy" class="producto-img">
+        <p>Borrador suave que no daña el papel.</p>
+        <p class="precio">Q3.50</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Corrector de Cinta</h3>
+        <img src="img/corrector.jpg" alt="Corrector de cinta" width="200" loading="lazy" class="producto-img">
+        <p>Elimina errores de tinta al instante.</p>
+        <p class="precio">Q14.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Sacapuntas con Depósito</h3>
+        <img src="img/sacapuntas.jpg" alt="Sacapuntas metálico" width="200" loading="lazy" class="producto-img">
+        <p>Mantiene la limpieza en el escritorio.</p>
+        <p class="precio">Q8.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <!-- EQUIPO Y ACCESORIOS -->
+    <article class="producto">
+        <h3>Mochila Ergonómica</h3>
+        <img src="img/mochila.jpg" alt="Mochila escolar" width="200" loading="lazy" class="producto-img">
+        <p>Resistente y con varios compartimentos.</p>
+        <p class="precio">Q275.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Lonchera Térmica</h3>
+        <img src="img/lonchera.jpg" alt="Lonchera térmica" width="200" loading="lazy" class="producto-img">
+        <p>Conserva tus alimentos frescos.</p>
+        <p class="precio">Q95.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Cartuchera Escolar</h3>
+        <img src="img/cartuchera.jpg" alt="Cartuchera escolar" width="200" loading="lazy" class="producto-img">
+        <p>Organiza tus útiles en un solo lugar.</p>
+        <p class="precio">Q40.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Bolsa Escolar de Tela</h3>
+        <img src="img/bolsa-escolar.jpg" alt="Bolsa de tela" width="200" loading="lazy" class="producto-img">
+        <p>Ligera para útiles adicionales.</p>
+        <p class="precio">Q25.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Bata de Laboratorio</h3>
+        <img src="img/bata-escolar.jpg" alt="Bata escolar" width="200" loading="lazy" class="producto-img">
+        <p>Protección para artes o laboratorio.</p>
+        <p class="precio">Q110.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <!-- PAPELERÍA Y PEGAMENTOS -->
+    <article class="producto">
+        <h3>Resma de Papel Bond</h3>
+        <img src="img/papel-bond.jpg" alt="Paquete de hojas bond" width="200" loading="lazy" class="producto-img">
+        <p>500 hojas tamaño carta para impresión.</p>
+        <p class="precio">Q48.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Papel Construcción (Pack)</h3>
+        <img src="img/papel-construccion.jpg" alt="Pack de hojas colores" width="200" loading="lazy" class="producto-img">
+        <p>Hojas gruesas para manualidades.</p>
+        <p class="precio">Q20.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Pliego de Cartulina</h3>
+        <img src="img/cartulina.jpg" alt="Cartulina" width="200" loading="lazy" class="producto-img">
+        <p>Disponible en varios colores.</p>
+        <p class="precio">Q4.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Pegamento en Barra</h3>
+        <img src="img/pegamento.jpg" alt="Pegamento en barra" width="200" loading="lazy" class="producto-img">
+        <p>Secado rápido para trabajos escolares.</p>
+        <p class="precio">Q7.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Silicón Frío</h3>
+        <img src="img/silicon.jpg" alt="Silicón frío" width="200" loading="lazy" class="producto-img">
+        <p>Pegamento fuerte para manualidades.</p>
+        <p class="precio">Q15.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Masking Tape</h3>
+        <img src="img/masking.jpg" alt="Cinta de papel" width="200" loading="lazy" class="producto-img">
+        <p>Cinta ideal para protección y arte.</p>
+        <p class="precio">Q12.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <!-- TECNOLOGÍA -->
+    <article class="producto">
+        <h3>Calculadora Científica</h3>
+        <img src="img/calculadora-cientifica.jpg" alt="Calculadora avanzada" width="200" loading="lazy" class="producto-img">
+        <p>Funciones avanzadas para ingeniería.</p>
+        <p class="precio">Q225.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Calculadora Básica</h3>
+        <img src="img/calculadora.jpg" alt="Calculadora básica" width="200" loading="lazy" class="producto-img">
+        <p>Electrónica para operaciones rápidas.</p>
+        <p class="precio">Q55.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Memoria USB 32GB</h3>
+        <img src="img/usb-32gb.jpg" alt="Memoria USB 32GB" width="200" loading="lazy" class="producto-img">
+        <p>Almacenamiento de alta velocidad.</p>
+        <p class="precio">Q65.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Mouse Óptico</h3>
+        <img src="img/mouse.jpg" alt="Mouse óptico" width="200" loading="lazy" class="producto-img">
+        <p>Ergonómico para estudio y trabajo.</p>
+        <p class="precio">Q75.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Teclado Multimedia</h3>
+        <img src="img/teclado.jpg" alt="Teclado multimedia" width="200" loading="lazy" class="producto-img">
+        <p>Resistente y cómodo para escribir.</p>
+        <p class="precio">Q130.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Audífonos con Micrófono</h3>
+        <img src="img/audifonos.jpg" alt="Audífonos" width="200" loading="lazy" class="producto-img">
+        <p>Ideales para clases en línea.</p>
+        <p class="precio">Q175.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <!-- LIBROS Y REFERENCIA -->
+    <article class="producto">
+        <h3>Libro de Ciencias</h3>
+        <img src="img/libro-ciencias.jpg" alt="Libro de ciencias" width="200" loading="lazy" class="producto-img">
+        <p>Temas de ciencias naturales y experimentos.</p>
+        <p class="precio">Q165.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Libro de Historia</h3>
+        <img src="img/libro-historia.jpg" alt="Libro de historia" width="200" loading="lazy" class="producto-img">
+        <p>Eventos clave de la historia universal.</p>
+        <p class="precio">Q145.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Libro de Física</h3>
+        <img src="img/libro-fisica.jpg" alt="Libro de física" width="200" loading="lazy" class="producto-img">
+        <p>Problemas resueltos y leyes de física.</p>
+        <p class="precio">Q185.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Libro de Inglés</h3>
+        <img src="img/libro-ingles.jpg" alt="Libro de inglés" width="200" loading="lazy" class="producto-img">
+        <p>Guía práctica para el idioma.</p>
+        <p class="precio">Q195.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Libro de Literatura</h3>
+        <img src="img/libro-literatura.jpg" alt="Libro de literatura" width="200" loading="lazy" class="producto-img">
+        <p>Obra clásica para análisis y lectura.</p>
+        <p class="precio">Q95.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Diccionario Español</h3>
+        <img src="img/diccionario.jpg" alt="Diccionario" width="200" loading="lazy" class="producto-img">
+        <p>Definiciones claras y actualizadas.</p>
+        <p class="precio">Q60.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Atlas Geográfico</h3>
+        <img src="img/atlas.jpg" alt="Atlas mundial" width="200" loading="lazy" class="producto-img">
+        <p>Mapas políticos y físicos del mundo.</p>
+        <p class="precio">Q85.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <!-- OFICINA Y ORGANIZACIÓN -->
+    <article class="producto">
+        <h3>Agenda Escolar Anual</h3>
+        <img src="img/agenda.jpg" alt="Agenda escolar" width="200" loading="lazy" class="producto-img">
+        <p>Organiza tareas, fechas y exámenes.</p>
+        <p class="precio">Q55.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Libreta de Apuntes</h3>
+        <img src="img/libreta.jpg" alt="Libreta" width="200" loading="lazy" class="producto-img">
+        <p>Compacta para anotaciones rápidas.</p>
+        <p class="precio">Q12.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Folder Tamaño Carta</h3>
+        <img src="img/folder.jpg" alt="Folder" width="200" loading="lazy" class="producto-img">
+        <p>Resistente para documentos.</p>
+        <p class="precio">Q2.50</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Archivador Rígido</h3>
+        <img src="img/archivador.jpg" alt="Archivador" width="200" loading="lazy" class="producto-img">
+        <p>Para grandes volúmenes de papel.</p>
+        <p class="precio">Q35.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Grapadora de Metal</h3>
+        <img src="img/grapadora.jpg" alt="Grapadora" width="200" loading="lazy  " class="producto-img">
+        <p>Alta durabilidad para oficina.</p>
+        <p class="precio">Q45.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Perforadora de Papel</h3>
+        <img src="img/perforador.jpg" alt="Perforadora" width="200" loading="lazy" class="producto-img">
+        <p>Base antideslizante de dos agujeros.</p>
+        <p class="precio">Q30.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Pizarra Blanca Pequeña</h3>
+        <img src="img/pizarra.jpg" alt="Pizarra blanca" width="200" loading="lazy" class="producto-img">
+        <p>Ideal para estudios rápidos y notas.</p>
+        <p class="precio">Q65.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <!-- ARTE -->
+    <article class="producto">
+        <h3>Set de Pinceles</h3>
+        <img src="img/pinceles.jpg" alt="Set de pinceles" width="200" loading="lazy" class="producto-img">
+        <p>Diferentes tamaños para pintura.</p>
+        <p class="precio">Q45.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Temperas (Set 6)</h3>
+        <img src="img/tempera.jpg" alt="Set de temperas" width="200" loading="lazy" class="producto-img">
+        <p>Colores vivos para expresión artística.</p>
+        <p class="precio">Q22.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>Tijeras Punta Roma</h3>
+        <img src="img/tijeras.jpg" alt="Tijeras escolares" width="200" loading="lazy" class="producto-img">
+        <p>Seguras para uso infantil.</p>
+        <p class="precio">Q10.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+
+    <article class="producto">
+        <h3>USB Genérica 16GB</h3>
+        <img src="img/usb-gen.jpg" alt="USB" width="200" loading="lazy" class="producto-img">
+        <p>Almacenamiento portátil básico.</p>
+        <p class="precio">Q45.00</p>
+        <button type="button">Agregar al carrito</button>
+    </article>
+</section>
+        <section id="evidencias">
+            <h2>Nuestras Evidencias</h2>
+            <div class="galeria-evidencias">
+                <img src="img/evidencia base de datos.jpg" alt="Captura de pantalla de la base de datos 1" width="200">
+                <img src="img/evidencia base de datos2.jpg" alt="Captura de pantalla de la base de datos 2" width="200">
+                <p>Evidencias del Proyecto</p>
+            </div>
+        </section>
+    </main>
+<div id="carrito-panel" class="carrito-overlay">
+    <div class="carrito-contenido">
+        <span class="cerrar-carrito">&times;</span>
+        <h2>Tu Carrito</h2>
+        <div id="items-carrito">
+        </div>
+        <div class="carrito-total">
+            <p>Total: Q<span id="total-precio">0.00</span></p>
+            <button class="btn-comprar">Finalizar Compra</button>
+        </div>
+    </div>
+</div>
+<div id="checkout-panel" class="carrito-overlay">
+    <div class="carrito-contenido">
+        <span class="cerrar-checkout">&times;</span>
+        <h2>Finalizar Pedido</h2>
+        
+        <form id="formulario-pago">
+            <div class="seccion-form">
+                <h3><i class="fas fa-user"></i> Datos de Envío</h3>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="text" placeholder="Dirección exacta de entrega" required>
+                <input type="tel" placeholder="Teléfono" required>
+            </div>
+
+            <div class="seccion-form">
+    <h3><i class="fas fa-credit-card"></i> Método de Pago</h3>
+    <div class="opciones-pago">
+        <label class="metodo">
+            <input type="radio" name="pago" value="tarjeta" checked>
+            <span>Tarjeta Visa / Mastercard</span>
+        </label>
+        <label class="metodo">
+            <input type="radio" name="pago" value="paypal">
+            <span>PayPal</span>
+        </label>
+        <label class="metodo">
+            <input type="radio" name="pago" value="transferencia">
+            <span>Transferencia Bancaria</span>
+        </label>
+    </div>
+
+    <!-- Contenedores Dinámicos de Verificación -->
+    <div id="detalle-pago-container" style="margin-top: 15px;">
+        <!-- Campos para Tarjeta (Se muestran por defecto) -->
+        <div id="campos-tarjeta" class="metodo-detalle">
+            <input type="text" placeholder="Número de Tarjeta (16 dígitos)" maxlength="16" required>
+            <div style="display: flex; gap: 10px;">
+                <input type="text" placeholder="MM/AA" maxlength="5" style="width: 50%;" required>
+                <input type="text" placeholder="CVV" maxlength="3" style="width: 50%;" required>
+            </div>
+        </div>
+
+        <!-- Info para PayPal -->
+        <div id="campos-paypal" class="metodo-detalle" style="display: none;">
+            <p style="font-size: 0.9rem; color: #555;">Serás redirigido a la página oficial de PayPal para verificar tu cuenta.</p>
+        </div>
+
+        <!-- Info para Transferencia -->
+        <div id="campos-transferencia" class="metodo-detalle" style="display: none;">
+            <p style="font-size: 0.85rem; background: #f0f0f0; padding: 10px; border-radius: 5px;">
+                <strong>Banco Industrial</strong><br>
+                Cuenta Monetaria: 123-456789-0<br>
+                Nombre: Libromanía S.A.
+            </p>
+            <input type="text" placeholder="Número de Boleta / Referencia">
+        </div>
+    </div>
+</div>
+
+            <div class="resumen-final">
+                <p>Total a pagar: <strong>Q<span id="total-checkout">0.00</span></strong></p>
+            </div>
+
+            <button type="submit" class="btn-confirmar">Confirmar y Pagar</button>
+        </form>
+    </div>
+</div>
+    <section id="contacto">
+        <div class="tarjeta-contacto">
+            <div class="encabezado-contacto">
+                <h2>Directorio Libromanía</h2>
+                <p>Atención inmediata - Equipo UMG, contáctanos presionando los siguientes botones</p>
+            </div>
+            
+            <div class="grid-contactos">
+                <!-- Ventas -->
+                <a href="tel:+502365869928" title="Llamar a Alexander">
+                    ALEXANDER GONZALEZ (VENTAS)
+                </a>
+
+                <!-- Atención al Cliente -->
+                <a href="tel:+50256135721" title="Llamar a Dany">
+                    DANY MONTEPEQUE (ATENCION)
+                </a>
+
+                <!-- Soporte Técnico -->
+                <a href="tel:+50237322554" title="Llamar a Yelstin">
+                    YELSTIN HURTADO (SOPORTE)
+                </a>
+
+                <!-- Gerencia -->
+                <a href="tel:+50243146670" title="Llamar a Liss">
+                    LISS MORALES (GERENCIA)
+                </a>
+
+                <!-- Servicio a Domicilio con la clase especial -->
+                <a href="tel:+50255159173" class="wa-link" title="Llamar a Josue">
+                     JOSUE DEL CID (SERVICIO A DOMICILIO)
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+    <p>&copy; <span id="year"></span> LIBROMANÍA - Todos los derechos reservados.</p>
+</footer>
+    <div id="miModal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="imgGrande">
+    <div id="descripcion-imagen"></div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
