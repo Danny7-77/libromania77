@@ -632,17 +632,33 @@ footer {
     }
 
     /* Arregla la cuadrícula de productos para que sea una sola columna centrada */
-    .contenedor-productos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
+  .contenedor-productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 8px;
+        padding: 5px;
+        width: 100%;
     }
 
     .producto {
-        width: 90%; /* Ocupa el ancho del celular */
-        max-width: 350px;
-        margin: 0 auto;
+        width: 100%; 
+        padding: 5px;
+        font-size: 0.7rem; 
+        text-align: center;
+        border: 1px solid #ddd; 
+        border-radius: 5px;
+    }
+
+    .producto img {
+        width: 100%;
+        height: 70px; /* Foto pequeña para que no se vea gigante */
+        object-fit: contain;
+    }
+
+    .producto button {
+        width: 100%;
+        font-size: 0.6rem; /* Botón pequeño para que no se salga */
+        padding: 4px 2px;
     }
 
     /* Centra los botones del Directorio */
@@ -661,5 +677,30 @@ footer {
     body, html {
         overflow-x: hidden;
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Esto hará que el título y los iconos quepan bien */
+    .hero-section {
+        padding: 20px 5px; /* Menos espacio a los lados para ganar ancho */
+    }
+
+    h1 {
+        font-size: 2rem; 
+        word-wrap: break-word;
+    }
+
+    /* Ajuste para que los iconos de redes sociales y el buscador no se salgan */
+    .social-icons, .search-bar-container {
+        display: flex;
+        flex-wrap: wrap; /* Si no caben, se pasan abajo solitos */
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .search-bar {
+        width: 80%; /* El buscador ocupará el 80% del ancho del cel */
     }
 }
