@@ -611,96 +611,70 @@ footer {
     transform: translateY(0px); 
 }
 
-/* --- ESTILOS RESPONSIVOS --- */
+/* --- ÚNICO BLOQUE PARA CELULARES --- */
 @media (max-width: 768px) {
-    
-    /* Centra el fondo y ajusta el texto del título principal */
-    .hero-section {
-        background-attachment: scroll; /* Mejora el rendimiento en móviles */
-        padding: 40px 10px;
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    h1 {
-        font-size: 2.8rem; /* Ajusta el tamaño de "LIBROMANÍA" */
-        text-align: center;
-        width: 100%;
-    }
-
-    /* Arregla la cuadrícula de productos para que sea una sola columna centrada */
-  .contenedor-productos {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 8px;
-        padding: 5px;
-        width: 100%;
-    }
-
-    .producto {
-        width: 100%; 
-        padding: 5px;
-        font-size: 0.7rem; 
-        text-align: center;
-        border: 1px solid #ddd; 
-        border-radius: 5px;
-    }
-
-    .producto img {
-        width: 100%;
-        height: 70px; /* Foto pequeña para que no se vea gigante */
-        object-fit: contain;
-    }
-
-    .producto button {
-        width: 100%;
-        font-size: 0.6rem; /* Botón pequeño para que no se salga */
-        padding: 4px 2px;
-    }
-
-    /* Centra los botones del Directorio */
-    .directorio-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .boton-contacto {
-        width: 85%; 
-        margin: 10px 0;
-    }
-
     body, html {
         overflow-x: hidden;
         width: 100%;
     }
-}
 
-@media (max-width: 768px) {
-    /* Esto hará que el título y los iconos quepan bien */
-    .hero-section {
-        padding: 20px 5px; /* Menos espacio a los lados para ganar ancho */
-    }
-
+    /* Ajuste del Título Principal */
     h1 {
-        font-size: 2rem; 
-        word-wrap: break-word;
+        font-size: 1.7rem !important; /* Más pequeño para que no se vea por partes */
+        text-align: center;
+        padding: 10px;
     }
 
-    /* Ajuste para que los iconos de redes sociales y el buscador no se salgan */
-    .social-icons, .search-bar-container {
+    /* Ajuste de Buscador e Iconos */
+    .search-bar-container {
+        width: 90% !important;
+        margin: 10px auto;
+    }
+
+    .social-icons {
         display: flex;
-        flex-wrap: wrap; /* Si no caben, se pasan abajo solitos */
         justify-content: center;
-        width: 100%;
-        max-width: 100%;
+        gap: 15px;
     }
 
-    .search-bar {
-        width: 80%; /* El buscador ocupará el 80% del ancho del cel */
+    /* PRODUCTOS DE 3 EN 3 */
+    .contenedor-productos {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* Tres columnas exactas */
+        gap: 5px !important;
+        padding: 5px !important;
+    }
+
+    .producto {
+        width: 100% !important;
+        padding: 5px !important;
+        border: 1px solid #eee;
+    }
+
+    .producto h3 {
+        font-size: 0.65rem !important; /* Texto pequeño para que quepa */
+        height: 35px; /* Altura fija para que todos los cuadros midan lo mismo */
+        overflow: hidden;
+    }
+
+    .producto img {
+        height: 60px !important;
+        object-fit: contain;
+    }
+
+    .producto p {
+        display: none; /* Quitamos la descripción en cel para que no se amontone */
+    }
+
+    .producto button {
+        font-size: 0.6rem !important;
+        padding: 4px 2px !important;
+        width: 100%;
+    }
+
+    /* Directorio y otros botones */
+    .boton-contacto {
+        width: 90% !important;
+        margin: 5px auto;
     }
 }
