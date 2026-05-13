@@ -611,114 +611,54 @@ footer {
     transform: translateY(0px); 
 }
 
-@media (max-width: 768px) {
-    /* 1. Ajuste del Contenedor Principal */
-    body, html {
-        overflow-x: hidden;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* 2. Encabezado (Header) - Imitando la vista de PC */
-    .hero-section {
-        padding: 15px 5px !important;
-        background-size: cover;
-        background-position: center;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 2.2rem !important; /* Tamaño nítido como en tu captura */
-        margin-bottom: 5px;
-        letter-spacing: 1px;
-    }
-
-    .social-icons {
-        margin: 10px 0;
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .social-icons img {
-        width: 25px !important; /* Iconos pequeños y elegantes */
-    }
-
-    .search-bar-container {
-        width: 95% !important;
-        margin: 10px auto;
-    }
-
-    /* 3. Menú de Botones (Productos, Evidencias, etc.) */
-    nav, .menu-botones { 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-        padding: 5px;
-    }
-
-    nav a, .boton-menu {
-        font-size: 0.65rem !important;
-        padding: 6px 10px !important;
-        white-space: nowrap;
-    }
-
-    /* 4. LA CUADRÍCULA DE 3 PRODUCTOS (Como en image_dae6dd.jpg) */
-    .contenedor-productos {
+/* --- ESTE DEBE SER EL ÚLTIMO BLOQUE DE TU ARCHIVO --- */
+@media screen and (max-width: 768px) {
+    
+    /* Forzar que el contenedor sea un Grid de 3 columnas */
+    div.contenedor-productos, 
+    #contenedor-productos, 
+    section.contenedor-productos {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 8px !important;
-        padding: 10px !important;
+        grid-template-columns: 1fr 1fr 1fr !important; /* 3 columnas iguales */
+        grid-template-rows: auto !important;
+        gap: 5px !important;
         width: 100% !important;
-        box-sizing: border-box;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 5px !important;
+        flex-direction: row !important; /* Por si acaso tenías un flex arriba */
     }
 
+    /* Forzar que cada producto se ajuste a su tercio de pantalla */
     .producto {
         width: 100% !important;
-        padding: 8px !important;
-        border: 1px solid #eaeaea !important;
-        border-radius: 8px !important;
-        background: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        max-width: 100% !important;
+        min-width: 0 !important; /* Muy importante para que no se desborde */
+        margin: 0 !important;
+        padding: 4px !important;
+        box-sizing: border-box !important;
     }
 
-    .producto h3 {
-        font-size: 0.7rem !important; /* Para que quepa el nombre */
-        line-height: 1.1;
-        margin: 5px 0;
-        min-height: 30px;
-    }
-
+    /* Ajuste de imágenes para que no empujen el cuadro */
     .producto img {
         width: 100% !important;
-        height: 70px !important; /* Altura controlada para mantener la cuadrícula */
-        object-fit: contain;
+        height: 60px !important; 
+        object-fit: contain !important;
+    }
+
+    /* Título y textos pequeños */
+    .producto h3 {
+        font-size: 0.6rem !important;
+        height: 25px !important;
+        overflow: hidden !important;
     }
 
     .producto p {
-        font-size: 0.55rem !important; /* Descripción muy pequeña */
-        line-height: 1.2;
-        margin: 5px 0;
-        display: -webkit-box;
-        -webkit-line-clamp: 2; /* Solo muestra 2 líneas de texto */
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .producto .precio {
-        font-size: 0.75rem !important;
-        font-weight: bold;
-        margin: 5px 0;
+        display: none !important; /* Ocultar descripción para que quepan 3 */
     }
 
     .producto button {
-        width: 100% !important;
-        font-size: 0.6rem !important;
-        padding: 6px 2px !important;
-        border-radius: 4px;
+        font-size: 0.55rem !important;
+        padding: 3px 1px !important;
     }
 }
