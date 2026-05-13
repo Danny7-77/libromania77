@@ -610,3 +610,56 @@ footer {
 .btn-confirmar.boton-listo:active {
     transform: translateY(0px); 
 }
+
+/* --- ESTILOS RESPONSIVOS --- */
+@media (max-width: 768px) {
+    
+    /* Centra el fondo y ajusta el texto del título principal */
+    .hero-section {
+        background-attachment: scroll; /* Mejora el rendimiento en móviles */
+        padding: 40px 10px;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2.8rem; /* Ajusta el tamaño de "LIBROMANÍA" */
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Arregla la cuadrícula de productos para que sea una sola columna centrada */
+    .contenedor-productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .producto {
+        width: 90%; /* Ocupa el ancho del celular */
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    /* Centra los botones del Directorio */
+    .directorio-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .boton-contacto {
+        width: 85%; 
+        margin: 10px 0;
+    }
+
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
