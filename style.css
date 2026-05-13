@@ -611,70 +611,114 @@ footer {
     transform: translateY(0px); 
 }
 
-/* --- ÚNICO BLOQUE PARA CELULARES --- */
 @media (max-width: 768px) {
+    /* 1. Ajuste del Contenedor Principal */
     body, html {
         overflow-x: hidden;
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    /* Ajuste del Título Principal */
-    h1 {
-        font-size: 1.7rem !important; /* Más pequeño para que no se vea por partes */
+    /* 2. Encabezado (Header) - Imitando la vista de PC */
+    .hero-section {
+        padding: 15px 5px !important;
+        background-size: cover;
+        background-position: center;
         text-align: center;
-        padding: 10px;
     }
 
-    /* Ajuste de Buscador e Iconos */
-    .search-bar-container {
-        width: 90% !important;
-        margin: 10px auto;
+    h1 {
+        font-size: 2.2rem !important; /* Tamaño nítido como en tu captura */
+        margin-bottom: 5px;
+        letter-spacing: 1px;
     }
 
     .social-icons {
+        margin: 10px 0;
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 12px;
     }
 
-    /* PRODUCTOS DE 3 EN 3 */
+    .social-icons img {
+        width: 25px !important; /* Iconos pequeños y elegantes */
+    }
+
+    .search-bar-container {
+        width: 95% !important;
+        margin: 10px auto;
+    }
+
+    /* 3. Menú de Botones (Productos, Evidencias, etc.) */
+    nav, .menu-botones { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 5px;
+    }
+
+    nav a, .boton-menu {
+        font-size: 0.65rem !important;
+        padding: 6px 10px !important;
+        white-space: nowrap;
+    }
+
+    /* 4. LA CUADRÍCULA DE 3 PRODUCTOS (Como en image_dae6dd.jpg) */
     .contenedor-productos {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; /* Tres columnas exactas */
-        gap: 5px !important;
-        padding: 5px !important;
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 8px !important;
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box;
     }
 
     .producto {
         width: 100% !important;
-        padding: 5px !important;
-        border: 1px solid #eee;
+        padding: 8px !important;
+        border: 1px solid #eaeaea !important;
+        border-radius: 8px !important;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .producto h3 {
-        font-size: 0.65rem !important; /* Texto pequeño para que quepa */
-        height: 35px; /* Altura fija para que todos los cuadros midan lo mismo */
-        overflow: hidden;
+        font-size: 0.7rem !important; /* Para que quepa el nombre */
+        line-height: 1.1;
+        margin: 5px 0;
+        min-height: 30px;
     }
 
     .producto img {
-        height: 60px !important;
+        width: 100% !important;
+        height: 70px !important; /* Altura controlada para mantener la cuadrícula */
         object-fit: contain;
     }
 
     .producto p {
-        display: none; /* Quitamos la descripción en cel para que no se amontone */
+        font-size: 0.55rem !important; /* Descripción muy pequeña */
+        line-height: 1.2;
+        margin: 5px 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Solo muestra 2 líneas de texto */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .producto .precio {
+        font-size: 0.75rem !important;
+        font-weight: bold;
+        margin: 5px 0;
     }
 
     .producto button {
+        width: 100% !important;
         font-size: 0.6rem !important;
-        padding: 4px 2px !important;
-        width: 100%;
-    }
-
-    /* Directorio y otros botones */
-    .boton-contacto {
-        width: 90% !important;
-        margin: 5px auto;
+        padding: 6px 2px !important;
+        border-radius: 4px;
     }
 }
