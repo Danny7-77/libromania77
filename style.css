@@ -615,78 +615,65 @@ footer {
     7. AJUSTES PARA CELULARES (EL FINAL)
    ========================================= */
 @media screen and (max-width: 768px) {
-    /* 1. Imagen de fondo completa y escalada */
+    /* 1. HEADER - Imagen Completa y Escalada */
     header {
-        padding: 2rem 0.5rem !important;
+        padding: 40px 10px !important;
         background-size: cover !important;
         background-position: center !important;
-        min-height: 320px !important; /* Altura suficiente para ver la imagen */
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* 2. Título y Lema escalados */
     header h1 {
-        font-size: 1.8rem !important; /* Tamaño proporcional al ancho del celular */
-        letter-spacing: 2px !important;
+        font-size: 2rem !important;
         margin-bottom: 5px !important;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
 
     .lema {
-        font-size: 0.8rem !important;
-        margin-bottom: 15px !important;
-    }
-
-    /* 3. Redes Sociales en una sola fila pequeña */
-    .header-social-links {
-        display: flex !important;
-        gap: 8px !important;
-        margin-bottom: 15px !important;
-    }
-
-    .social-icon {
-        width: 28px !important;
-        height: 28px !important;
-        font-size: 0.8rem !important;
-    }
-
-    /* 4. Buscador Estilizado (Cápsula delgada) */
-    .busqueda-contenedor {
-        width: 85% !important;
-        height: 35px !important;
+        font-size: 0.85rem !important;
         margin-bottom: 20px !important;
+    }
+
+    /* 2. BUSCADOR - Centrado, Negro y Escalado */
+    .busqueda-contenedor {
+        width: 90% !important; /* Más ancho para que el texto quepa */
+        max-width: 320px !important;
+        height: 38px !important;
+        background: #000000 !important; /* Fondo negro como en laptop */
+        border: 1px solid #444 !important;
+        border-radius: 30px !important;
+        margin: 0 auto 25px auto !important; /* Centrado perfecto */
         display: flex !important;
         align-items: center !important;
+        padding: 0 5px 0 15px !important;
     }
 
     .busqueda-contenedor input {
-        font-size: 0.7rem !important;
-        padding: 0 10px !important;
-    }
-
-    .busqueda-boton {
-        width: 30px !important;
-        height: 30px !important;
-    }
-
-    /* 5. Menú de Funciones (Todo en una fila con puntos) */
-    nav ul {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 5px !important;
-        padding: 0 !important;
+        background: transparent !important;
+        color: white !important;
+        font-size: 0.75rem !important;
         width: 100% !important;
     }
 
-    nav li {
-        display: flex !important;
-        align-items: center !important;
+    .busqueda-boton {
+        background: #333 !important; /* Botón de lupa oscuro */
+        color: white !important;
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 50% !important;
+        border: none !important;
     }
 
-    /* Puntitos blancos diminutos */
+    /* 3. MENÚ DE FUNCIONES - Botones Negros tipo Laptop */
+    nav ul {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 5px !important;
+        padding: 0 !important;
+    }
+
     nav li:not(:last-child)::after {
         content: "•";
         color: white;
@@ -695,36 +682,70 @@ footer {
     }
 
     nav a {
-        background: white !important;
-        padding: 4px 8px !important;
+        background: #000000 !important; /* Fondo negro para botones */
+        color: white !important;
+        padding: 5px 10px !important;
         border-radius: 20px !important;
-        font-size: 0.55rem !important; /* Letra pequeña para que quepan los 4 */
+        font-size: 0.55rem !important;
+        text-transform: uppercase !important;
+        border: 1px solid #333 !important;
         white-space: nowrap !important;
     }
 
-    /* 6. PRODUCTOS DE 3 EN 3 (Infaltable) */
-    #productos {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 8px !important;
-        padding: 15px 5px !important;
+    /* 4. SECCIÓN DE PRODUCTOS - Fondo Negro y 3 Columnas */
+    #productos-seccion { 
+        background-color: #000000 !important; /* Mantiene el fondo negro de laptop */
+        padding: 20px 0 !important;
     }
 
+    #productos {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 en una fila */
+        gap: 6px !important;
+        padding: 10px 5px !important;
+        background-color: #000000 !important;
+    }
+
+    /* 5. TARJETAS DE PRODUCTO - Escaladas */
     .producto {
+        background: #1a1a1a !important; /* Gris muy oscuro para que resalte en el fondo negro */
+        border: 1px solid #333 !important;
         padding: 8px 4px !important;
+        border-radius: 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
     .producto img {
-        height: 65px !important;
+        height: 60px !important; /* Imagen pequeña para que quepan 3 */
+        object-fit: contain !important;
+        margin-bottom: 5px !important;
     }
 
     .producto h3 {
-        font-size: 0.55rem !important;
-        height: 25px !important;
+        font-size: 0.5rem !important;
+        color: white !important;
+        height: 22px !important;
+        margin: 2px 0 !important;
+        line-height: 1 !important;
+    }
+
+    .producto p {
+        display: none !important; /* Ocultamos descripción en celular para mantener escala */
+    }
+
+    .producto .precio {
+        font-size: 0.6rem !important;
+        color: #00ff00 !important; /* O el color que uses para el precio */
+        margin-bottom: 5px !important;
     }
 
     .producto button {
-        font-size: 0.5rem !important;
-        padding: 5px 0 !important;
+        width: 95% !important;
+        font-size: 0.45rem !important;
+        padding: 4px 0 !important;
+        background: #cc0000 !important; /* Tu rojo de "Agregar al carrito" */
+        border-radius: 4px !important;
     }
 }
