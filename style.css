@@ -615,78 +615,70 @@ footer {
     7. AJUSTES PARA CELULARES (EL FINAL)
    ========================================= */
 @media screen and (max-width: 768px) {
-    /* 1. Ajuste del Header (Contenedor Principal) */
+    /* 1. Imagen de fondo completa y escalada */
     header {
-        padding: 50px 15px !important; /* Espacio arriba y abajo para que respire */
-        text-align: center !important;
+        padding: 2rem 0.5rem !important;
+        background-size: cover !important;
+        background-position: center !important;
+        min-height: 320px !important; /* Altura suficiente para ver la imagen */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
+    /* 2. Título y Lema escalados */
     header h1 {
-        font-size: 3.2rem !important; /* Tamaño grande y elegante como en la foto */
+        font-size: 1.8rem !important; /* Tamaño proporcional al ancho del celular */
+        letter-spacing: 2px !important;
         margin-bottom: 5px !important;
-        font-family: 'Playfair Display', serif; /* O la que estés usando para el estilo Serif */
     }
 
     .lema {
-        font-size: 1.1rem !important;
-        margin-bottom: 25px !important;
+        font-size: 0.8rem !important;
+        margin-bottom: 15px !important;
     }
 
-    /* 2. Redes Sociales (Iconos circulares pequeños) */
+    /* 3. Redes Sociales en una sola fila pequeña */
     .header-social-links {
         display: flex !important;
-        justify-content: center !important;
-        gap: 15px !important;
-        margin-bottom: 25px !important;
+        gap: 8px !important;
+        margin-bottom: 15px !important;
     }
 
     .social-icon {
-        width: 32px !important;
-        height: 32px !important;
-        background: rgba(255, 255, 255, 0.2) !important; /* Efecto traslúcido */
-        border-radius: 50% !important;
-        font-size: 0.9rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 0.8rem !important;
     }
 
-    /* 3. Buscador (Cápsula con sombra interna) */
+    /* 4. Buscador Estilizado (Cápsula delgada) */
     .busqueda-contenedor {
         width: 85% !important;
-        max-width: 400px !important;
-        margin: 0 auto 35px auto !important;
-        background: rgba(255, 255, 255, 0.2) !important;
-        border: 1.5px solid white !important;
-        border-radius: 30px !important;
-        padding: 5px 15px !important;
+        height: 35px !important;
+        margin-bottom: 20px !important;
+        display: flex !important;
+        align-items: center !important;
     }
 
     .busqueda-contenedor input {
-        font-size: 0.85rem !important;
-        color: white !important;
-    }
-
-    .busqueda-contenedor input::placeholder {
-        color: rgba(255, 255, 255, 0.8) !important;
+        font-size: 0.7rem !important;
+        padding: 0 10px !important;
     }
 
     .busqueda-boton {
-        background: white !important;
-        color: #333 !important;
-        border-radius: 50% !important;
-        width: 35px !important;
-        height: 35px !important;
+        width: 30px !important;
+        height: 30px !important;
     }
 
-    /* 4. Menú de Navegación (Botones Cápsula Blancos) */
+    /* 5. Menú de Funciones (Todo en una fila con puntos) */
     nav ul {
         display: flex !important;
-        flex-wrap: wrap !important;
+        flex-direction: row !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 10px !important;
+        gap: 5px !important;
         padding: 0 !important;
+        width: 100% !important;
     }
 
     nav li {
@@ -694,23 +686,45 @@ footer {
         align-items: center !important;
     }
 
-    /* Los puntitos blancos de separación */
+    /* Puntitos blancos diminutos */
     nav li:not(:last-child)::after {
         content: "•";
         color: white;
-        margin-left: 10px;
-        font-size: 1.2rem;
+        font-size: 0.6rem;
+        margin-left: 5px;
     }
 
     nav a {
         background: white !important;
-        color: #333 !important;
-        padding: 8px 18px !important;
-        border-radius: 25px !important;
-        font-size: 0.65rem !important;
-        font-weight: bold !important;
-        text-transform: uppercase !important;
-        text-decoration: none !important;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+        padding: 4px 8px !important;
+        border-radius: 20px !important;
+        font-size: 0.55rem !important; /* Letra pequeña para que quepan los 4 */
+        white-space: nowrap !important;
+    }
+
+    /* 6. PRODUCTOS DE 3 EN 3 (Infaltable) */
+    #productos {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+        padding: 15px 5px !important;
+    }
+
+    .producto {
+        padding: 8px 4px !important;
+    }
+
+    .producto img {
+        height: 65px !important;
+    }
+
+    .producto h3 {
+        font-size: 0.55rem !important;
+        height: 25px !important;
+    }
+
+    .producto button {
+        font-size: 0.5rem !important;
+        padding: 5px 0 !important;
     }
 }
