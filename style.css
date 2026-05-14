@@ -614,144 +614,140 @@ footer {
 /* =========================================
     7. AJUSTES PARA CELULARES (EL FINAL)
    ========================================= */
-/* RESET DE SEGURIDAD PARA MÓVIL */
-* {
-    box-sizing: border-box;
-}
-
-body, html {
-    overflow-x: hidden; /* Evita que la página se mueva hacia los lados */
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #000000; /* Fondo negro total solicitado */
-}
-
 @media screen and (max-width: 768px) {
-    /* 1. HEADER Y TÍTULO (Escalado sin cortes) */
+    /* 1. Reset General y Fondo Negro */
+    body, html, main, section, #evidencias, #directorio, footer {
+        background-color: #000000 !important;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    /* 2. Header: Texto centrado y escalado */
     header {
-        padding: 20px 10px !important;
-        background-size: 100% 100% !important; /* Estira la imagen para que se vea completa */
-        min-height: 250px !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        padding: 30px 10px !important;
+        background-size: cover !important;
+        background-position: center !important;
     }
 
     header h1 {
-        font-size: 7vw !important; /* Tamaño basado en el ancho de pantalla */
-        margin: 0 !important;
+        font-size: 2.2rem !important;
+        margin-bottom: 5px !important;
         color: white;
-        text-align: center;
     }
 
     .lema {
-        font-size: 3vw !important;
-        margin-bottom: 10px !important;
+        font-size: 0.9rem !important;
+        color: white;
+        margin-bottom: 15px !important;
     }
 
-    /* 2. BUSCADOR (Igual a la imagen, contorno negro) */
+    /* 3. Buscador Exacto a la Foto */
     .busqueda-contenedor {
         width: 85% !important;
-        height: 35px !important;
+        height: 38px !important;
         background: white !important;
-        border: 2px solid #000000 !important; /* Contorno negro solicitado */
-        border-radius: 20px !important;
-        margin: 10px auto !important;
+        border: 2px solid #000000 !important; /* Contorno Negro */
+        border-radius: 25px !important;
+        margin: 0 auto 20px auto !important;
         display: flex !important;
         overflow: hidden;
     }
 
     .busqueda-contenedor input {
         flex: 1;
-        border: none;
-        padding-left: 15px;
-        font-size: 11px !important;
+        border: none !important;
+        padding-left: 15px !important;
+        font-size: 0.8rem !important;
     }
 
     .busqueda-boton {
-        background: #000000 !important; /* Botón de lupa negro */
-        color: white;
-        width: 40px;
-        border: none;
+        background: #000000 !important; /* Lupa Negra */
+        color: white !important;
+        width: 45px !important;
+        border: none !important;
     }
 
-    /* 3. BOTONES DE MENÚ (En fila, pequeños) */
+    /* 4. Menú de Botones en una Fila */
     nav ul {
         display: flex !important;
-        flex-direction: row !important;
         justify-content: center !important;
-        gap: 4px !important;
+        gap: 5px !important;
         padding: 0 !important;
     }
 
     nav a {
         background: white !important;
         color: black !important;
-        font-size: 8px !important; /* Tamaño micro para que quepan todos */
-        padding: 5px 8px !important;
-        border-radius: 15px !important;
-        text-decoration: none;
-        white-space: nowrap;
+        font-size: 0.6rem !important;
+        padding: 6px 10px !important;
+        border-radius: 20px !important;
+        white-space: nowrap !important;
     }
 
-    /* 4. PRODUCTOS (3 POR FILA EXACTOS) */
+    /* 5. Título "Nuestros Útiles" Blanco */
+    h2 {
+        color: white !important;
+        text-align: center !important;
+        font-size: 1.1rem !important;
+        margin: 20px 0 !important;
+    }
+
+    /* 6. Grill de Productos: 3 por fila exactos */
     #productos {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; /* Esto fuerza las 3 columnas */
-        gap: 6px !important;
-        padding: 15px 8px !important;
-        background-color: #000000 !important; /* Fondo negro en la sección */
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+        padding: 10px 8px !important;
+        background-color: #000000 !important;
     }
 
     .producto {
-        background: white !important; /* Tarjetas blancas para que resalten */
-        border-radius: 8px !important;
-        padding: 5px !important;
+        background: white !important;
+        border-radius: 10px !important;
+        padding: 8px 5px !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        justify-content: space-between;
-        min-height: 140px;
+        min-height: 180px !important;
     }
 
     .producto img {
-        width: 100% !important;
-        height: 60px !important;
+        width: 90% !important;
+        height: 55px !important;
         object-fit: contain !important;
+        margin-bottom: 5px !important;
     }
 
     .producto h3 {
-        font-size: 8px !important;
+        font-size: 0.55rem !important;
+        color: #333 !important;
+        height: 25px !important;
         margin: 5px 0 !important;
-        color: #333;
-        text-align: center;
-        height: 20px;
         overflow: hidden;
+        text-align: center;
+    }
+
+    /* Ocultar descripción larga para mantener el orden de la foto */
+    .producto p:not(.precio) {
+        display: none !important;
     }
 
     .producto .precio {
-        font-size: 9px !important;
-        font-weight: bold;
-        color: black;
+        font-size: 0.65rem !important;
+        font-weight: bold !important;
+        color: black !important;
+        margin-top: auto !important;
     }
 
     .producto button {
         width: 100% !important;
-        font-size: 7px !important;
-        padding: 5px 0 !important;
-        background-color: #e63946 !important; /* Rojo del botón */
-        color: white;
-        border: none;
-        border-radius: 4px;
-    }
-
-    /* 5. SECCIONES EXTRAS (Negro total) */
-    #evidencias, #directorio, footer {
-        background-color: #000000 !important;
+        font-size: 0.55rem !important;
+        padding: 6px 0 !important;
+        background-color: #e63946 !important; /* Rojo Agregar al carrito */
         color: white !important;
-        text-align: center;
-        padding: 20px 0 !important;
+        border: none !important;
+        border-radius: 5px !important;
+        margin-top: 5px !important;
     }
 }
