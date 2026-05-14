@@ -615,139 +615,86 @@ footer {
     7. AJUSTES PARA CELULARES (EL FINAL)
    ========================================= */
 @media screen and (max-width: 768px) {
-    /* 1. Reset General y Fondo Negro */
-    body, html, main, section, #evidencias, #directorio, footer {
-        background-color: #000000 !important;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-
-    /* 2. Header: Texto centrado y escalado */
+    
+    /* 1. Ajuste del Título Principal - Para que no se corte */
     header {
-        padding: 30px 10px !important;
-        background-size: cover !important;
-        background-position: center !important;
+        padding: 3rem 1rem !important; /* Menos espacio arriba y abajo */
     }
 
     header h1 {
-        font-size: 2.2rem !important;
-        margin-bottom: 5px !important;
-        color: white;
+        font-size: 2.2rem !important; /* Tamaño nítido que sí cabe en la pantalla */
+        letter-spacing: 1px !important;
     }
 
     .lema {
-        font-size: 0.9rem !important;
-        color: white;
-        margin-bottom: 15px !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 20px !important;
     }
 
-    /* 3. Buscador Exacto a la Foto */
+    /* 2. Buscador e Iconos */
     .busqueda-contenedor {
-        width: 85% !important;
-        height: 38px !important;
-        background: white !important;
-        border: 2px solid #000000 !important; /* Contorno Negro */
-        border-radius: 25px !important;
-        margin: 0 auto 20px auto !important;
-        display: flex !important;
-        overflow: hidden;
+        width: 95% !important;
+        margin-bottom: 20px !important;
     }
 
-    .busqueda-contenedor input {
-        flex: 1;
-        border: none !important;
-        padding-left: 15px !important;
-        font-size: 0.8rem !important;
+    .header-social-links {
+        gap: 10px !important;
     }
 
-    .busqueda-boton {
-        background: #000000 !important; /* Lupa Negra */
-        color: white !important;
-        width: 45px !important;
-        border: none !important;
-    }
-
-    /* 4. Menú de Botones en una Fila */
+    /* 3. Menú de Botones - Para que no se amontonen */
     nav ul {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 5px !important;
-        padding: 0 !important;
+        flex-wrap: wrap; /* Si no caben, se bajan solitos */
+        gap: 8px !important;
     }
 
     nav a {
-        background: white !important;
-        color: black !important;
-        font-size: 0.6rem !important;
-        padding: 6px 10px !important;
-        border-radius: 20px !important;
-        white-space: nowrap !important;
+        padding: 6px 12px !important;
+        font-size: 0.7rem !important;
     }
 
-    /* 5. Título "Nuestros Útiles" Blanco */
-    h2 {
-        color: white !important;
-        text-align: center !important;
-        font-size: 1.1rem !important;
-        margin: 20px 0 !important;
-    }
-
-    /* 6. Grill de Productos: 3 por fila exactos */
+    /* 4. EL TRUCO DE LOS 3 PRODUCTOS (Corregido con ID #productos) */
     #productos {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 8px !important;
-        padding: 10px 8px !important;
-        background-color: #000000 !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* ¡Aquí se activan las 3 columnas! */
+        gap: 5px !important;
+        padding: 10px 5px !important;
+        width: 100% !important;
     }
 
     .producto {
-        background: white !important;
-        border-radius: 10px !important;
-        padding: 8px 5px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        min-height: 180px !important;
+        width: 100% !important;
+        padding: 5px !important;
+        margin: 0 !important;
     }
 
     .producto img {
-        width: 90% !important;
-        height: 55px !important;
+        height: 70px !important; /* Imagen pequeña para que quepan 3 */
         object-fit: contain !important;
-        margin-bottom: 5px !important;
     }
 
     .producto h3 {
-        font-size: 0.55rem !important;
-        color: #333 !important;
-        height: 25px !important;
-        margin: 5px 0 !important;
-        overflow: hidden;
-        text-align: center;
+        font-size: 0.6rem !important;
+        height: 30px !important;
+        line-height: 1.1 !important;
+        overflow: hidden !important;
     }
 
-    /* Ocultar descripción larga para mantener el orden de la foto */
-    .producto p:not(.precio) {
-        display: none !important;
-    }
-
-    .producto .precio {
-        font-size: 0.65rem !important;
-        font-weight: bold !important;
-        color: black !important;
-        margin-top: auto !important;
+    .producto p {
+        display: none !important; /* Ocultamos la descripción para que no se desordene */
     }
 
     .producto button {
-        width: 100% !important;
         font-size: 0.55rem !important;
-        padding: 6px 0 !important;
-        background-color: #e63946 !important; /* Rojo Agregar al carrito */
-        color: white !important;
-        border: none !important;
-        border-radius: 5px !important;
-        margin-top: 5px !important;
+        padding: 5px 2px !important;
+        width: 100% !important;
+    }
+
+    /* 5. Otros ajustes */
+    .galeria-evidencias img {
+        width: 100% !important;
+    }
+
+    .tarjeta-contacto {
+        padding: 20px 10px !important;
     }
 }
