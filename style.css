@@ -615,106 +615,102 @@ footer {
     7. AJUSTES PARA CELULARES (EL FINAL)
    ========================================= */
 @media screen and (max-width: 768px) {
-    /* 1. Encabezado Estilo Desktop */
+    /* 1. Ajuste del Header (Contenedor Principal) */
     header {
-        padding: 4rem 1rem !important; /* Más aire como en la foto */
-        background-attachment: scroll !important; /* Mejor para el rendimiento móvil */
+        padding: 50px 15px !important; /* Espacio arriba y abajo para que respire */
+        text-align: center !important;
     }
 
     header h1 {
-        font-size: 2.8rem !important;
-        margin-bottom: 0 !important;
+        font-size: 3.2rem !important; /* Tamaño grande y elegante como en la foto */
+        margin-bottom: 5px !important;
+        font-family: 'Playfair Display', serif; /* O la que estés usando para el estilo Serif */
     }
 
     .lema {
-        font-size: 1rem !important;
-        margin-top: 10px !important;
-        margin-bottom: 30px !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 25px !important;
     }
 
-    /* 2. Buscador e Iconos */
-    .busqueda-contenedor {
-        max-width: 90% !important;
-        margin-bottom: 30px !important;
-    }
-
+    /* 2. Redes Sociales (Iconos circulares pequeños) */
     .header-social-links {
+        display: flex !important;
+        justify-content: center !important;
         gap: 15px !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 25px !important;
     }
 
     .social-icon {
-        width: 35px !important;
-        height: 35px !important;
-        font-size: 1rem !important;
+        width: 32px !important;
+        height: 32px !important;
+        background: rgba(255, 255, 255, 0.2) !important; /* Efecto traslúcido */
+        border-radius: 50% !important;
+        font-size: 0.9rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
-    /* 3. Menú con bolitas (Nav) */
+    /* 3. Buscador (Cápsula con sombra interna) */
+    .busqueda-contenedor {
+        width: 85% !important;
+        max-width: 400px !important;
+        margin: 0 auto 35px auto !important;
+        background: rgba(255, 255, 255, 0.2) !important;
+        border: 1.5px solid white !important;
+        border-radius: 30px !important;
+        padding: 5px 15px !important;
+    }
+
+    .busqueda-contenedor input {
+        font-size: 0.85rem !important;
+        color: white !important;
+    }
+
+    .busqueda-contenedor input::placeholder {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    .busqueda-boton {
+        background: white !important;
+        color: #333 !important;
+        border-radius: 50% !important;
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    /* 4. Menú de Navegación (Botones Cápsula Blancos) */
     nav ul {
-        gap: 8px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 10px !important;
+        padding: 0 !important;
+    }
+
+    nav li {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Los puntitos blancos de separación */
+    nav li:not(:last-child)::after {
+        content: "•";
+        color: white;
+        margin-left: 10px;
+        font-size: 1.2rem;
     }
 
     nav a {
-        padding: 6px 15px !important;
-        font-size: 0.65rem !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-    }
-
-    /* 4. LA CUADRÍCULA DE 3 (Idéntica a image_caf6dc.jpg) */
-    #productos {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 10px !important;
-        padding: 20px 10px !important;
-        background-color: #f9f9f9 !important; /* Fondo grisáceo suave de la foto */
-    }
-
-    .producto {
-        width: 100% !important;
-        padding: 10px !important;
-        border-radius: 10px !important; /* Esquinas redondeadas de la foto */
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
         background: white !important;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-
-    .producto img {
-        height: 85px !important; /* Tamaño exacto para que quepan 3 */
-        border-radius: 6px !important;
-        margin-bottom: 10px !important;
-        object-fit: contain !important;
-    }
-
-    .producto h3 {
-        font-size: 0.75rem !important;
-        line-height: 1.2 !important;
-        height: 35px !important;
-        margin: 5px 0 !important;
-        color: #2c3e50 !important;
-    }
-
-    .producto p {
-        font-size: 0.6rem !important;
-        line-height: 1.3 !important;
-        color: #666 !important;
-        margin-bottom: 8px !important;
-        display: -webkit-box !important;
-        -webkit-line-clamp: 3 !important; /* Muestra 3 líneas de texto */
-        -webkit-box-orient: vertical !important;
-        overflow: hidden !important;
-    }
-
-    .producto .precio {
-        font-size: 0.8rem !important;
-        font-weight: bold !important;
-        margin: 8px 0 !important;
-    }
-
-    .producto button {
+        color: #333 !important;
+        padding: 8px 18px !important;
+        border-radius: 25px !important;
         font-size: 0.65rem !important;
-        padding: 8px 2px !important;
-        border-radius: 5px !important;
-        text-transform: none !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        text-decoration: none !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
     }
 }
