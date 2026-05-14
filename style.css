@@ -611,54 +611,90 @@ footer {
     transform: translateY(0px); 
 }
 
-/* --- ESTE DEBE SER EL ÚLTIMO BLOQUE DE TU ARCHIVO --- */
+/* =========================================
+    7. AJUSTES PARA CELULARES (EL FINAL)
+   ========================================= */
 @media screen and (max-width: 768px) {
     
-    /* Forzar que el contenedor sea un Grid de 3 columnas */
-    div.contenedor-productos, 
-    #contenedor-productos, 
-    section.contenedor-productos {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr 1fr !important; /* 3 columnas iguales */
-        grid-template-rows: auto !important;
-        gap: 5px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 5px !important;
-        flex-direction: row !important; /* Por si acaso tenías un flex arriba */
+    /* 1. Ajuste del Título Principal - Para que no se corte */
+    header {
+        padding: 3rem 1rem !important; /* Menos espacio arriba y abajo */
     }
 
-    /* Forzar que cada producto se ajuste a su tercio de pantalla */
+    header h1 {
+        font-size: 2.2rem !important; /* Tamaño nítido que sí cabe en la pantalla */
+        letter-spacing: 1px !important;
+    }
+
+    .lema {
+        font-size: 1.1rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* 2. Buscador e Iconos */
+    .busqueda-contenedor {
+        width: 95% !important;
+        margin-bottom: 20px !important;
+    }
+
+    .header-social-links {
+        gap: 10px !important;
+    }
+
+    /* 3. Menú de Botones - Para que no se amontonen */
+    nav ul {
+        flex-wrap: wrap; /* Si no caben, se bajan solitos */
+        gap: 8px !important;
+    }
+
+    nav a {
+        padding: 6px 12px !important;
+        font-size: 0.7rem !important;
+    }
+
+    /* 4. EL TRUCO DE LOS 3 PRODUCTOS (Corregido con ID #productos) */
+    #productos {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* ¡Aquí se activan las 3 columnas! */
+        gap: 5px !important;
+        padding: 10px 5px !important;
+        width: 100% !important;
+    }
+
     .producto {
         width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important; /* Muy importante para que no se desborde */
+        padding: 5px !important;
         margin: 0 !important;
-        padding: 4px !important;
-        box-sizing: border-box !important;
     }
 
-    /* Ajuste de imágenes para que no empujen el cuadro */
     .producto img {
-        width: 100% !important;
-        height: 60px !important; 
+        height: 70px !important; /* Imagen pequeña para que quepan 3 */
         object-fit: contain !important;
     }
 
-    /* Título y textos pequeños */
     .producto h3 {
         font-size: 0.6rem !important;
-        height: 25px !important;
+        height: 30px !important;
+        line-height: 1.1 !important;
         overflow: hidden !important;
     }
 
     .producto p {
-        display: none !important; /* Ocultar descripción para que quepan 3 */
+        display: none !important; /* Ocultamos la descripción para que no se desordene */
     }
 
     .producto button {
         font-size: 0.55rem !important;
-        padding: 3px 1px !important;
+        padding: 5px 2px !important;
+        width: 100% !important;
+    }
+
+    /* 5. Otros ajustes */
+    .galeria-evidencias img {
+        width: 100% !important;
+    }
+
+    .tarjeta-contacto {
+        padding: 20px 10px !important;
     }
 }
