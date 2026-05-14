@@ -615,137 +615,94 @@ footer {
     7. AJUSTES PARA CELULARES (EL FINAL)
    ========================================= */
 @media screen and (max-width: 768px) {
-    /* 1. HEADER - Imagen Completa y Escalada */
-    header {
-        padding: 40px 10px !important;
-        background-size: cover !important;
-        background-position: center !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header h1 {
-        font-size: 2rem !important;
-        margin-bottom: 5px !important;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    }
-
-    .lema {
-        font-size: 0.85rem !important;
-        margin-bottom: 20px !important;
-    }
-
-    /* 2. BUSCADOR - Centrado, Negro y Escalado */
+    /* 1. BUSCADOR - Contorno Negro y Botón Negro */
     .busqueda-contenedor {
-        width: 90% !important; /* Más ancho para que el texto quepa */
-        max-width: 320px !important;
+        width: 90% !important;
         height: 38px !important;
-        background: #000000 !important; /* Fondo negro como en laptop */
-        border: 1px solid #444 !important;
+        background: white !important; /* Fondo blanco para que el texto resalte */
+        border: 2px solid #000000 !important; /* CONTORNO NEGRO */
         border-radius: 30px !important;
-        margin: 0 auto 25px auto !important; /* Centrado perfecto */
+        margin: 0 auto 20px auto !important;
         display: flex !important;
         align-items: center !important;
-        padding: 0 5px 0 15px !important;
-    }
-
-    .busqueda-contenedor input {
-        background: transparent !important;
-        color: white !important;
-        font-size: 0.75rem !important;
-        width: 100% !important;
+        overflow: hidden !important;
     }
 
     .busqueda-boton {
-        background: #333 !important; /* Botón de lupa oscuro */
+        background: #000000 !important; /* BOTÓN DE LUPA NEGRO */
         color: white !important;
-        width: 30px !important;
-        height: 30px !important;
-        border-radius: 50% !important;
+        width: 40px !important;
+        height: 100% !important;
         border: none !important;
+        border-radius: 0 !important;
     }
 
-    /* 3. MENÚ DE FUNCIONES - Botones Negros tipo Laptop */
-    nav ul {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 5px !important;
-        padding: 0 !important;
-    }
-
-    nav li:not(:last-child)::after {
-        content: "•";
-        color: white;
-        font-size: 0.6rem;
-        margin-left: 5px;
-    }
-
-    nav a {
-        background: #000000 !important; /* Fondo negro para botones */
+    /* 2. UNIFICACIÓN DE FONDO NEGRO (Útiles, Evidencias, Directorio) */
+    /* Ajusta estos IDs/Clases según los nombres exactos en tu HTML */
+    #utiles, #evidencias, #directorio, .seccion-negra, footer {
+        background-color: #000000 !important;
         color: white !important;
-        padding: 5px 10px !important;
-        border-radius: 20px !important;
-        font-size: 0.55rem !important;
-        text-transform: uppercase !important;
-        border: 1px solid #333 !important;
-        white-space: nowrap !important;
+        padding: 20px 10px !important;
     }
 
-    /* 4. SECCIÓN DE PRODUCTOS - Fondo Negro y 3 Columnas */
-    #productos-seccion { 
-        background-color: #000000 !important; /* Mantiene el fondo negro de laptop */
-        padding: 20px 0 !important;
+    h2 { /* Títulos como "Nuestros Útiles" o "Evidencias" */
+        color: white !important;
+        font-size: 1.2rem !important;
+        text-align: center !important;
+        margin-bottom: 15px !important;
     }
 
+    /* 3. ESCALA DE PRODUCTOS (3 por línea sin cortes) */
     #productos {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; /* 3 en una fila */
-        gap: 6px !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 Columnas fijas */
+        gap: 5px !important; /* Espacio mínimo para que quepan */
         padding: 10px 5px !important;
         background-color: #000000 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    /* 5. TARJETAS DE PRODUCTO - Escaladas */
     .producto {
-        background: #1a1a1a !important; /* Gris muy oscuro para que resalte en el fondo negro */
+        background: #111 !important; /* Gris casi negro para contraste */
         border: 1px solid #333 !important;
-        padding: 8px 4px !important;
-        border-radius: 8px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
+        padding: 5px !important;
+        border-radius: 5px !important;
+        text-align: center !important;
     }
 
     .producto img {
-        height: 60px !important; /* Imagen pequeña para que quepan 3 */
+        width: 100% !important;
+        height: 50px !important; /* Imagen pequeña para forzar la escala */
         object-fit: contain !important;
-        margin-bottom: 5px !important;
     }
 
     .producto h3 {
-        font-size: 0.5rem !important;
+        font-size: 0.5rem !important; /* Texto micro para que no se amontone */
+        margin: 4px 0 !important;
+        height: 20px !important;
+        overflow: hidden;
         color: white !important;
-        height: 22px !important;
-        margin: 2px 0 !important;
-        line-height: 1 !important;
-    }
-
-    .producto p {
-        display: none !important; /* Ocultamos descripción en celular para mantener escala */
     }
 
     .producto .precio {
-        font-size: 0.6rem !important;
-        color: #00ff00 !important; /* O el color que uses para el precio */
-        margin-bottom: 5px !important;
+        font-size: 0.55rem !important;
+        font-weight: bold !important;
     }
 
     .producto button {
-        width: 95% !important;
-        font-size: 0.45rem !important;
-        padding: 4px 0 !important;
-        background: #cc0000 !important; /* Tu rojo de "Agregar al carrito" */
-        border-radius: 4px !important;
+        width: 100% !important;
+        font-size: 0.45rem !important; /* Botón pequeño para que quepa en la columna */
+        padding: 5px 0 !important;
+        white-space: nowrap !important;
+    }
+
+    /* 4. MENÚ DE FUNCIONES - Negro y Pequeño */
+    nav a {
+        background: #000000 !important;
+        border: 1px solid white !important;
+        color: white !important;
+        font-size: 0.55rem !important;
+        padding: 5px 8px !important;
     }
 }
