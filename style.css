@@ -698,3 +698,204 @@ footer {
         padding: 20px 10px !important;
     }
 }
+
+/* ==========================================
+   SECCIÓN: MENÚ DESPLEGABLE DE EVIDENCIAS
+   ========================================== */
+
+/* Estilo del contenedor desplegable */
+.menu-desplegable {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Ocultar la flecha nativa del navegador */
+.menu-desplegable summary::-webkit-details-marker {
+    display: none;
+}
+.menu-desplegable summary {
+    list-style: none;
+    outline: none;
+}
+
+.menu-desplegable summary h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Rotación de la flecha indicadora al abrir */
+.menu-desplegable[open] .flecha {
+    transform: rotate(180deg);
+}
+
+.flecha {
+    font-size: 0.6em;
+    transition: transform 0.3s ease;
+}
+
+/* --- CUADRÍCULA DE CATÁLOGO (GRID) --- */
+.galeria-evidencias {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 25px;
+    contain: layout; /* Aísla el renderizado interno para evitar bugs en cascada */
+}
+
+/* Tarjeta individual para cada imagen y su texto */
+.tarjeta-evidencia {
+    background-color: #262626;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #3a3a3a;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* El cambio visual se limita al borde y la sombra (no altera tamaños ni genera parpadeos) */
+.tarjeta-evidencia:hover {
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
+    border-color: #007bff;
+}
+
+/* Contenedor del enlace para encapsular el efecto de la imagen */
+.tarjeta-evidencia > a {
+    display: block;
+    overflow: hidden; /* Mantiene el zoom dentro de los bordes de la tarjeta */
+    border-radius: 4px;
+}
+
+/* Estilo de la imagen dentro de la tarjeta */
+.tarjeta-evidencia img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    will-change: transform; /* Optimización de hardware para la animación */
+}
+
+/* Zoom suave exclusivo hacia el interior de la imagen */
+.tarjeta-evidencia:hover img {
+    transform: scale(1.06); 
+}
+
+/* Estilo de las etiquetas (Consulta 1, Consulta 2, etc.) */
+.nombre-evidencia {
+    margin: 12px 0 2px 0;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.pie-galeria {
+    text-align: center;
+    margin-top: 25px;
+    color: #888;
+    font-style: italic;
+}
+
+
+/* ==========================================
+   SECCIÓN: MODAL (VISOR DE IMÁGENES COMPLETA)
+   ========================================== */
+
+/* El contenedor negro que cubre toda la pantalla */
+.modal-visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Se activa únicamente cuando coincide con el id de la tarjeta seleccionada */
+.modal-visor:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Capa transparente intermedia para cerrar al hacer clic fuera de la imagen */
+.modal-cerrar-fondo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+/* Contenedor interno que aloja la captura en grande */
+.modal-contenido {
+    position: relative;
+    max-width: 85%;
+    max-height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-contenido img {
+    max-width: 100%;
+    max-height: 80vh;
+    border: 3px solid #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* El botón de cerrar flotante (X) */
+.btn-cerrar {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    color: #ffffff;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+    line-height: 1;
+}
+
+.btn-cerrar:hover {
+    color: #ff4d4d;
+}
+
+/* --- BOTÓN DE DESCARGA EN LAS TARJETAS (Optimizado para Celular) --- */
+.btn-descargar {
+    display: block; /* Ocupa su propia línea debajo del texto */
+    margin-top: 10px;
+    padding: 10px 12px; /* Espacio ideal para tocar fácilmente con el dedo */
+    background-color: #007bff; /* Color azul llamativo */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 4px;
+    box-sizing: border-box; /* Evita que el botón se desborde de la tarjeta */
+    width: 100%; /* Se estira al ancho completo de la tarjeta automáticamente */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Efecto al pasar el cursor (Computadora) */
+.btn-descargar:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    color: #ffffff;
+}
+
+/* Animación de pulsación (Tanto en clic como al tocar con el dedo) */
+.btn-descargar:active {
+    transform: scale(0.97);
+}
