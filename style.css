@@ -2297,20 +2297,14 @@ main {
 }
 
 /* ========================================================
-   FORZAR MODO ESCRITORIO (Escala de zoom fija)
+   MODO ESCRITORIO FORZADO: Zoom automático
    ======================================================== */
 
-@media screen and (max-width: 1024px) {
-    body {
-        /* Fijamos el ancho que quieres que el navegador simule */
-        width: 1200px !important; 
-        
-        /* Esto le dice al navegador: "No reacomodes nada, 
-           solo escala toda la página para que quepa en el ancho" */
-        transform: scale(0.4); 
-        transform-origin: top left;
-        
-        /* Evita scroll horizontal innecesario */
-        overflow-x: hidden;
-    }
+/* Esta regla fuerza al cuerpo a tener un ancho fijo de 1200px */
+body {
+    width: 1200px !important;
+    margin: 0 auto !important;
+    /* 'zoom' es la forma más limpia de escalar sin romper el diseño */
+    zoom: 0.35; 
+    transform-origin: top left;
 }
