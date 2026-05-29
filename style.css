@@ -2297,57 +2297,70 @@ main {
 }
 
 /* ========================================================
-    CORRECCIONES PARA MÓVILES (Pegar al FINAL del archivo)
+   📱 SOLUCIÓN DE EMERGENCIA: EFECTO PC EN CELULAR
+   (Pegar al FINAL del archivo para forzar la estructura)
    ======================================================== */
 
-@media (max-width: 768px) {
-    /* 1. ELIMINAR EL SCROLL HORIZONTAL FANTASMA */
+@media screen and (max-width: 1024px) {
+    /* 1. FORZAR EL HEADER A UNA SOLA FILA (Evita el apilado) */
+    .header-top {
+        display: flex !important;
+        flex-direction: row !important; /* Fuerza línea horizontal */
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 5px !important;
+        padding: 0 5px !important;
+    }
+
+    /* Ajuste de tamaños para que quepan */
+    .logo-imagen {
+        width: 80px !important; /* Muy pequeño para caber */
+        height: 80px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .busqueda-contenedor-header form {
+        width: auto !important;
+        flex-grow: 1 !important;
+        max-width: 150px !important; /* Forzamos tamaño pequeño */
+        padding: 2px 10px !important;
+        border-radius: 20px !important;
+    }
+    .busqueda-contenedor-header input {
+        font-size: 0.7rem !important; /* Texto muy pequeño */
+        padding: 4px !important;
+    }
+
+    .carrito-zona a {
+        font-size: 0.65rem !important; /* Texto del carrito pequeño */
+        gap: 2px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* 2. FORZAR EL MENÚ A UNA SOLA FILA (Layout de PC) */
+    /* Nota: Esto mantendrá la estructura, pero podría requerir scroll horizontal */
+    .nav-header-estatico ul {
+        display: flex !important;
+        flex-direction: row !important; /* Fuerza línea horizontal */
+        flex-wrap: nowrap !important; /* Evita que los botones bajen */
+        overflow-x: auto !important; /* Permite scroll horizontal para ver los botones si no caben */
+        gap: 4px !important;
+        justify-content: flex-start !important;
+        margin-top: 10px !important;
+        padding: 0 5px 10px 5px !important;
+        -webkit-overflow-scrolling: touch; /* Scroll suave en iPhones */
+    }
+
+    /* Botones muy pequeños para maximizar la visibilidad */
+    .nav-header-estatico a {
+        font-size: 0.6rem !important;
+        padding: 4px 6px !important;
+        border-radius: 4px !important;
+        white-space: nowrap !important; /* Evita que el texto interno baje */
+    }
+
+    /* 3. EVITAR SCROLL HORIZONTAL DE TODA LA PÁGINA (Solo las tablas/menús) */
     body {
-        overflow-x: hidden !important; 
-        width: 100%;
-    }
-
-    /* 2. ARREGLAR LA BARRA DE BÚSQUEDA (El principal problema) */
-    /* Aplica a cualquier input de texto dentro de tu cabecera */
-    input[type="text"], input[type="search"], .buscador {
-        width: 90% !important; 
-        max-width: 100%;
-        box-sizing: border-box !important;
-        margin: 0 auto 15px auto !important; /* Centrado y con espacio abajo */
-        display: block;
-    }
-
-    /* 3. OPTIMIZAR LOS BOTONES 3D PARA DEDOS */
-    .nav-3d {
-        padding: 5px 10px;
-        gap: 8px; /* Reducimos el espacio entre ellos */
-    }
-    
-    .nav-3d a {
-        padding: 10px 12px;
-        font-size: 0.75rem; /* Letra un poco más pequeña */
-        flex-grow: 1; /* Esto hace que se estiren para llenar el espacio vacío */
-        text-align: center;
-    }
-
-    /* 4. EVITAR QUE EL CARRUSEL ROMPA LOS LADOS */
-    .carrusel-contenedor {
-        width: 100% !important;
-        left: 0 !important;
-        transform: none !important;
-        border-radius: 0;
-    }
-
-    .carrusel-slide img {
-        height: 200px !important; /* Altura perfecta para vista vertical */
-    }
-
-    /* 5. DAR RESPIRACIÓN A LOS CONTENEDORES (Para que no peguen al borde) */
-    .contenedor-principal, 
-    .bienvenida-panel, 
-    .seccion-contacto-container {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        box-sizing: border-box;
+        overflow-x: hidden !important;
     }
 }
