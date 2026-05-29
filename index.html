@@ -3,760 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Final Librería | Libromanía</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Libromanía - Inicio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>LIBROMANÍA</h1>
-    <p class="lema">Tu tienda de útiles escolares favorita</p>
-    <div class="header-social-links">
-    <a href="https://wa.me/50236589928" target="_blank" class="social-icon wa" title="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61589715330332" target="_blank" class="social-icon fb" title="Facebook">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com/_libromania/?hl=es" target="_blank" class="social-icon ig" title="Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-</div>
-    <div class="busqueda-contenedor">
+
+   <header class="header-estatico">
+    <div class="header-container">
+        <div class="header-top">
+            <div class="logo-imagen">
+               <a href="index.html">  
+                <img src="img/logo2.png" alt="Logo de Libromanía" class="logo-header">
+               </a>
+            </div>
+            
+            <div class="busqueda-contenedor-header">
     <form action="#">
         <input type="text" placeholder="¿Qué útil escolar buscas hoy?" name="search">
         <button type="submit">🔍</button>
     </form>
 </div>
-    <nav>
-        <ul>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#evidencias">Evidencias</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#" id="abrir-carrito">🛒 Carrito (<span id="contador-carrito">0</span>)</a></li>
-        </ul>
-    </nav>
-    </header>
-    <main class="contenedor-productos">
-        <h2 style="text-align: center; margin-top: 20px;">Nuestros Útiles Escolares</h2>
-        
-        <section id="productos">
-    <!-- ESCRITURA Y DIBUJO -->
-    <article class="producto">
-        <h3>Caja de Lápices de Colores</h3>
-        <img src="img/crayones.jpg" alt="Pack de 24 lápices" width="200" loading="lazy" class="producto-img">
-        <p>Pack de 24 colores brillantes para dibujo artístico.</p>
-        <p class="precio">Q45.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
 
-    <article class="producto">
-        <h3>Cuadernos Espirales</h3>
-        <img src="img/cuadernos.jpg" alt="Cuadernos espirales" width="200" loading="lazy" class="producto-img">
-        <p>Cuadernos de 100 hojas, cuadros o líneas.</p>
-        <p class="precio">Q18.50</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Lápices de Grafito (Docena)</h3>
-        <img src="img/colores.jpg" alt="Pack de colores" width="200" loading="lazy" class="producto-img">
-        <p>Pack de lápices variados para tareas artísticas.</p>
-        <p class="precio">Q22.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Marcadores (Set 12)</h3>
-        <img src="img/marcadores.jpg" alt="Set de marcadores" width="200" loading="lazy" class="producto-img">
-        <p>Marcadores de colores intensos para resaltar.</p>
-        <p class="precio">Q35.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Crayones de Cera</h3>
-        <img src="img/crayones.jpg" alt="Crayones de cera" width="200" loading="lazy" class="producto-img">
-        <p>Crayones resistentes para los más pequeños.</p>
-        <p class="precio">Q15.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Resaltadores Neón</h3>
-        <img src="img/resaltadores.jpg" alt="Set de resaltadores neón" width="200" loading="lazy" class="producto-img">
-        <p>Resaltadores para estudios y lectura.</p>
-        <p class="precio">Q28.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <!-- ÚTILES DE PRECISIÓN Y CORRECCIÓN -->
-    <article class="producto">
-        <h3>Juego de Geometría</h3>
-        <img src="img/set-de-geometria.jpg" alt="Set de Geometría" width="200" loading="lazy" class="producto-img">
-        <p>Ideal para matemáticas y dibujo técnico.</p>
-        <p class="precio">Q30.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Regla de Plástico</h3>
-        <img src="img/regla.jpg" alt="Regla graduada" width="200" loading="lazy" class="producto-img">
-        <p>Regla de 30cm de material duradero.</p>
-        <p class="precio">Q5.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Regla Metálica</h3>
-        <img src="img/regla-metalica.jpg" alt="Regla de acero" width="200" loading="lazy" class="producto-img">
-        <p>Acero inoxidable para mayor precisión.</p>
-        <p class="precio">Q12.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Compás de Precisión</h3>
-        <img src="img/compas.jpg" alt="Compás técnico" width="200" loading="lazy" class="producto-img">
-        <p>Para trazos de círculos perfectos.</p>
-        <p class="precio">Q25.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Borrador de Migajón</h3>
-        <img src="img/borrador.jpg" alt="Borrador" width="200" loading="lazy" class="producto-img">
-        <p>Borrador suave que no daña el papel.</p>
-        <p class="precio">Q3.50</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Corrector de Cinta</h3>
-        <img src="img/corrector.jpg" alt="Corrector de cinta" width="200" loading="lazy" class="producto-img">
-        <p>Elimina errores de tinta al instante.</p>
-        <p class="precio">Q14.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Sacapuntas con Depósito</h3>
-        <img src="img/sacapuntas.jpg" alt="Sacapuntas metálico" width="200" loading="lazy" class="producto-img">
-        <p>Mantiene la limpieza en el escritorio.</p>
-        <p class="precio">Q8.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <!-- EQUIPO Y ACCESORIOS -->
-    <article class="producto">
-        <h3>Mochila Ergonómica</h3>
-        <img src="img/mochila.jpg" alt="Mochila escolar" width="200" loading="lazy" class="producto-img">
-        <p>Resistente y con varios compartimentos.</p>
-        <p class="precio">Q275.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Lonchera Térmica</h3>
-        <img src="img/lonchera.jpg" alt="Lonchera térmica" width="200" loading="lazy" class="producto-img">
-        <p>Conserva tus alimentos frescos.</p>
-        <p class="precio">Q95.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Cartuchera Escolar</h3>
-        <img src="img/cartuchera.jpg" alt="Cartuchera escolar" width="200" loading="lazy" class="producto-img">
-        <p>Organiza tus útiles en un solo lugar.</p>
-        <p class="precio">Q40.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Bolsa Escolar de Tela</h3>
-        <img src="img/bolsa-escolar.jpg" alt="Bolsa de tela" width="200" loading="lazy" class="producto-img">
-        <p>Ligera para útiles adicionales.</p>
-        <p class="precio">Q25.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Bata de Laboratorio</h3>
-        <img src="img/bata-escolar.jpg" alt="Bata escolar" width="200" loading="lazy" class="producto-img">
-        <p>Protección para artes o laboratorio.</p>
-        <p class="precio">Q110.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <!-- PAPELERÍA Y PEGAMENTOS -->
-    <article class="producto">
-        <h3>Resma de Papel Bond</h3>
-        <img src="img/papel-bond.jpg" alt="Paquete de hojas bond" width="200" loading="lazy" class="producto-img">
-        <p>500 hojas tamaño carta para impresión.</p>
-        <p class="precio">Q48.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Papel Construcción (Pack)</h3>
-        <img src="img/papel-construccion.jpg" alt="Pack de hojas colores" width="200" loading="lazy" class="producto-img">
-        <p>Hojas gruesas para manualidades.</p>
-        <p class="precio">Q20.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Pliego de Cartulina</h3>
-        <img src="img/cartulina.jpg" alt="Cartulina" width="200" loading="lazy" class="producto-img">
-        <p>Disponible en varios colores.</p>
-        <p class="precio">Q4.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Pegamento en Barra</h3>
-        <img src="img/pegamento.jpg" alt="Pegamento en barra" width="200" loading="lazy" class="producto-img">
-        <p>Secado rápido para trabajos escolares.</p>
-        <p class="precio">Q7.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Silicón Frío</h3>
-        <img src="img/silicon.jpg" alt="Silicón frío" width="200" loading="lazy" class="producto-img">
-        <p>Pegamento fuerte para manualidades.</p>
-        <p class="precio">Q15.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Masking Tape</h3>
-        <img src="img/masking.jpg" alt="Cinta de papel" width="200" loading="lazy" class="producto-img">
-        <p>Cinta ideal para protección y arte.</p>
-        <p class="precio">Q12.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <!-- TECNOLOGÍA -->
-    <article class="producto">
-        <h3>Calculadora Científica</h3>
-        <img src="img/calculadora-cientifica.jpg" alt="Calculadora avanzada" width="200" loading="lazy" class="producto-img">
-        <p>Funciones avanzadas para ingeniería.</p>
-        <p class="precio">Q225.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Calculadora Básica</h3>
-        <img src="img/calculadora.jpg" alt="Calculadora básica" width="200" loading="lazy" class="producto-img">
-        <p>Electrónica para operaciones rápidas.</p>
-        <p class="precio">Q55.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Memoria USB 32GB</h3>
-        <img src="img/usb-32gb.jpg" alt="Memoria USB 32GB" width="200" loading="lazy" class="producto-img">
-        <p>Almacenamiento de alta velocidad.</p>
-        <p class="precio">Q65.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Mouse Óptico</h3>
-        <img src="img/mouse.jpg" alt="Mouse óptico" width="200" loading="lazy" class="producto-img">
-        <p>Ergonómico para estudio y trabajo.</p>
-        <p class="precio">Q75.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Teclado Multimedia</h3>
-        <img src="img/teclado.jpg" alt="Teclado multimedia" width="200" loading="lazy" class="producto-img">
-        <p>Resistente y cómodo para escribir.</p>
-        <p class="precio">Q130.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Audífonos con Micrófono</h3>
-        <img src="img/audifonos.jpg" alt="Audífonos" width="200" loading="lazy" class="producto-img">
-        <p>Ideales para clases en línea.</p>
-        <p class="precio">Q175.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <!-- LIBROS Y REFERENCIA -->
-    <article class="producto">
-        <h3>Libro de Ciencias</h3>
-        <img src="img/libro-ciencias.jpg" alt="Libro de ciencias" width="200" loading="lazy" class="producto-img">
-        <p>Temas de ciencias naturales y experimentos.</p>
-        <p class="precio">Q165.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Libro de Historia</h3>
-        <img src="img/libro-historia.jpg" alt="Libro de historia" width="200" loading="lazy" class="producto-img">
-        <p>Eventos clave de la historia universal.</p>
-        <p class="precio">Q145.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Libro de Física</h3>
-        <img src="img/libro-fisica.jpg" alt="Libro de física" width="200" loading="lazy" class="producto-img">
-        <p>Problemas resueltos y leyes de física.</p>
-        <p class="precio">Q185.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Libro de Inglés</h3>
-        <img src="img/libro-ingles.jpg" alt="Libro de inglés" width="200" loading="lazy" class="producto-img">
-        <p>Guía práctica para el idioma.</p>
-        <p class="precio">Q195.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Libro de Literatura</h3>
-        <img src="img/libro-literatura.jpg" alt="Libro de literatura" width="200" loading="lazy" class="producto-img">
-        <p>Obra clásica para análisis y lectura.</p>
-        <p class="precio">Q95.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Diccionario Español</h3>
-        <img src="img/diccionario.jpg" alt="Diccionario" width="200" loading="lazy" class="producto-img">
-        <p>Definiciones claras y actualizadas.</p>
-        <p class="precio">Q60.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Atlas Geográfico</h3>
-        <img src="img/atlas.jpg" alt="Atlas mundial" width="200" loading="lazy" class="producto-img">
-        <p>Mapas políticos y físicos del mundo.</p>
-        <p class="precio">Q85.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <!-- OFICINA Y ORGANIZACIÓN -->
-    <article class="producto">
-        <h3>Agenda Escolar Anual</h3>
-        <img src="img/agenda.jpg" alt="Agenda escolar" width="200" loading="lazy" class="producto-img">
-        <p>Organiza tareas, fechas y exámenes.</p>
-        <p class="precio">Q55.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Libreta de Apuntes</h3>
-        <img src="img/libreta.jpg" alt="Libreta" width="200" loading="lazy" class="producto-img">
-        <p>Compacta para anotaciones rápidas.</p>
-        <p class="precio">Q12.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Folder Tamaño Carta</h3>
-        <img src="img/folder.jpg" alt="Folder" width="200" loading="lazy" class="producto-img">
-        <p>Resistente para documentos.</p>
-        <p class="precio">Q2.50</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Archivador Rígido</h3>
-        <img src="img/archivador.jpg" alt="Archivador" width="200" loading="lazy" class="producto-img">
-        <p>Para grandes volúmenes de papel.</p>
-        <p class="precio">Q35.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Grapadora de Metal</h3>
-        <img src="img/grapadora.jpg" alt="Grapadora" width="200" loading="lazy  " class="producto-img">
-        <p>Alta durabilidad para oficina.</p>
-        <p class="precio">Q45.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Perforadora de Papel</h3>
-        <img src="img/perforador.jpg" alt="Perforadora" width="200" loading="lazy" class="producto-img">
-        <p>Base antideslizante de dos agujeros.</p>
-        <p class="precio">Q30.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Pizarra Blanca Pequeña</h3>
-        <img src="img/pizarra.jpg" alt="Pizarra blanca" width="200" loading="lazy" class="producto-img">
-        <p>Ideal para estudios rápidos y notas.</p>
-        <p class="precio">Q65.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <!-- ARTE -->
-    <article class="producto">
-        <h3>Set de Pinceles</h3>
-        <img src="img/pinceles.jpg" alt="Set de pinceles" width="200" loading="lazy" class="producto-img">
-        <p>Diferentes tamaños para pintura.</p>
-        <p class="precio">Q45.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Temperas (Set 6)</h3>
-        <img src="img/tempera.jpg" alt="Set de temperas" width="200" loading="lazy" class="producto-img">
-        <p>Colores vivos para expresión artística.</p>
-        <p class="precio">Q22.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>Tijeras Punta Roma</h3>
-        <img src="img/tijeras.jpg" alt="Tijeras escolares" width="200" loading="lazy" class="producto-img">
-        <p>Seguras para uso infantil.</p>
-        <p class="precio">Q10.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-
-    <article class="producto">
-        <h3>USB Genérica 16GB</h3>
-        <img src="img/usb-gen.jpg" alt="USB" width="200" loading="lazy" class="producto-img">
-        <p>Almacenamiento portátil básico.</p>
-        <p class="precio">Q45.00</p>
-        <button type="button">Agregar al carrito</button>
-    </article>
-</section>
-       <section id="evidencias">
-    <details class="menu-desplegable">
-        <summary><h2>Nuestras Evidencias <span class="flecha">▼</span></h2></summary>
-        
-        <div class="galeria-evidencias">
-            
-            <div class="tarjeta-evidencia">
-                <a href="#img1">
-                    <img src="img/consulta 1.jpg" alt="Consulta 1">
+            <div class="carrito-zona">
+                <a href="#" id="abrir-carrito">
+                    <i class="fas fa-shopping-cart"></i> 
+                    <span>Mi Carrito (<span id="contador-carrito">0</span>)</span>
                 </a>
-                <p class="nombre-evidencia">Consulta 1</p>
-
-                <a href="img/consulta 1.jpg" download="Consulta_1.jpg" class="btn-descargar">
-                    Descargar 📥
-                </a>  
-
-                <div id="img1" class="modal-visor">
-                    <a href="#evidencias" class="modal-cerrar-fondo"></a>
-                    <div class="modal-contenido">
-                        <a href="#evidencias" class="btn-cerrar">×</a>
-                        <img src="img/consulta 1.jpg" alt="Consulta 1 Ampliada">
-                    </div>
-                </div>
             </div>
-
-            <div class="tarjeta-evidencia">
-                <a href="#img2">
-                    <img src="img/consulta 2.jpg" alt="Consulta 2">
-                </a>
-                <p class="nombre-evidencia">Consulta 2</p>
-
-                <a href="img/consulta 2.jpg" download="Consulta_2.jpg" class="btn-descargar">
-                    Descargar 📥
-                </a>
-
-                <div id="img2" class="modal-visor">
-                    <a href="#evidencias" class="modal-cerrar-fondo"></a>
-                    <div class="modal-contenido">
-                        <a href="#evidencias" class="btn-cerrar">×</a>
-                        <img src="img/consulta 2.jpg" alt="Consulta 2 Ampliada">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tarjeta-evidencia">
-                <a href="#img3">
-                    <img src="img/consulta 3.jpg" alt="Consulta 3">
-                </a>
-                <p class="nombre-evidencia">Consulta 3</p>
-
-                <a href="img/consulta 3.jpg" download="Consulta_3.jpg" class="btn-descargar">
-                    Descargar 📥
-                </a>
-
-                <div id="img3" class="modal-visor">
-                    <a href="#evidencias" class="modal-cerrar-fondo"></a>
-                    <div class="modal-contenido">
-                        <a href="#evidencias" class="btn-cerrar">×</a>
-                        <img src="img/consulta 3.jpg" alt="Consulta 3 Ampliada">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tarjeta-evidencia">
-                <a href="#img4">
-                    <img src="img/consulta 4.jpg" alt="Consulta 4">
-                </a>
-                <p class="nombre-evidencia">Consulta 4</p>
-
-                <a href="img/consulta 4.jpg" download="Consulta_4.jpg" class="btn-descargar">
-                    Descargar 📥
-                </a>
-
-                <div id="img4" class="modal-visor">
-                    <a href="#evidencias" class="modal-cerrar-fondo"></a>
-                    <div class="modal-contenido">
-                        <a href="#evidencias" class="btn-cerrar">×</a>
-                        <img src="img/consulta 4.jpg" alt="Consulta 4 Ampliada">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tarjeta-evidencia">
-                <a href="#img5">
-                    <img src="img/consulta 5.jpg" alt="Consulta 5">
-                </a>
-                <p class="nombre-evidencia">Consulta 5</p>
-
-                <a href="img/consulta 5.jpg" download="Consulta_5.jpg" class="btn-descargar">
-                    Descargar 📥
-                </a>
-
-                <div id="img5" class="modal-visor">
-                    <a href="#evidencias" class="modal-cerrar-fondo"></a>
-                    <div class="modal-contenido">
-                        <a href="#evidencias" class="btn-cerrar">×</a>
-                        <img src="img/consulta 5.jpg" alt="Consulta 5 Ampliada">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tarjeta-evidencia">
-                <a href="#img6">
-                    <img src="img/consulta 6.jpg" alt="Consulta 6">
-                </a>
-                <p class="nombre-evidencia">Consulta 6</p>
-
-                <a href="img/consulta 6.jpg" download="Consulta_6.jpg" class="btn-descargar">
-                    Descargar 📥
-                </a>
-
-                <div id="img6" class="modal-visor">
-                    <a href="#evidencias" class="modal-cerrar-fondo"></a>
-                    <div class="modal-contenido">
-                        <a href="#evidencias" class="btn-cerrar">×</a>
-                        <img src="img/consulta 6.jpg" alt="Consulta 6 Ampliada">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tarjeta-evidencia">
-                <a href="#img7">
-                    <img src="img/consulta 7.jpg" alt="Consulta 7">
-                </a>
-                <p class="nombre-evidencia">Consulta 7</p>
-
-                <a href="img/consulta 7.jpg" download="Consulta_7.jpg" class="btn-descargar">
-                    Descargar 📥
-                </a>
-
-                <div id="img7" class="modal-visor">
-                    <a href="#evidencias" class="modal-cerrar-fondo"></a>
-                    <div class="modal-contenido">
-                        <a href="#evidencias" class="btn-cerrar">×</a>
-                        <img src="img/consulta 7.jpg" alt="Consulta 7 Ampliada">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tarjeta-evidencia">
-                <a href="#img8">
-                    <img src="img/consulta 8.jpg" alt="Consulta 8">
-                </a>
-                <p class="nombre-evidencia">Consulta 8</p>
-
-                <a href="img/consulta 8.jpg" download="Consulta_8.jpg" class="btn-descargar">
-                    Descargar 📥
-                </a>
-
-                <div id="img8" class="modal-visor">
-                    <a href="#evidencias" class="modal-cerrar-fondo"></a>
-                    <div class="modal-contenido">
-                        <a href="#evidencias" class="btn-cerrar">×</a>
-                        <img src="img/consulta 8.jpg" alt="Consulta 8 Ampliada">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tarjeta-evidencia">
-                <a href="#img9">
-                    <img src="img/consulta 9.jpg" alt="Consulta 9">
-                </a>
-                <p class="nombre-evidencia">Consulta 9</p>
-
-                <a href="img/consulta 9.jpg" download="Consulta_9.jpg" class="btn-descargar">
-                    Descargar 📥
-                </a>
-
-                <div id="img9" class="modal-visor">
-                    <a href="#evidencias" class="modal-cerrar-fondo"></a>
-                    <div class="modal-contenido">
-                        <a href="#evidencias" class="btn-cerrar">×</a>
-                        <img src="img/consulta 9.jpg" alt="Consulta 9 Ampliada">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tarjeta-evidencia">
-                <a href="#img10">
-                    <img src="img/diagrama er.jpg" alt="Diagrama ER">
-                </a>
-                <p class="nombre-evidencia">Diagrama ER</p>
-
-                <a href="img/diagrama er.jpg" download="Diagrama_ER.jpg" class="btn-descargar">
-                    Descargar 📥
-                </a>
-
-                <div id="img10" class="modal-visor">
-                    <a href="#evidencias" class="modal-cerrar-fondo"></a>
-                    <div class="modal-contenido">
-                        <a href="#evidencias" class="btn-cerrar">×</a>
-                        <img src="img/diagrama er.jpg" alt="Diagrama ER Ampliado">
-                    </div>
-                </div>
-            </div>
-
         </div>
-        <p class="pie-galeria">Evidencias del Proyecto</p>
-    </details>
+
+        <nav class="nav-3d">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="base_de_datos.html">Base de Datos</a>
+    <a href="reportes.html">Reportes</a>
+    <a href="tecnologias.html">Tecnologías</a>
+    <a href="equipo.html">Nuestro Equipo</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+    </div>
+</header>
+
+    <main style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+
+        <section class="carrusel-contenedor">
+    <div class="carrusel-slide" id="track-carrusel">
+        <img src="img/nombre.jpg" alt="Nombre de la libreria">
+        <img src="img/utiles.jpg" alt="Utiles de publicidad">
+        <img src="img/promocion.jpg" alt="Promocion tecnologica">
+        <img src="img/combo libromania.jpg" alt="Combo de libreria">
+    </div>
+    
+    <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">&#10094;</button>
+    <button class="carrusel-btn next" onclick="moverCarrusel(1)">&#10095;</button>
 </section>
+        
+        <!-- PRIMER BLOQUE: Bienvenidos a Libromanía + Imagen al lado -->
+        <section class="bloque-seccion">
+            <div class="columna-texto">
+                <h2 style="color: var(--primario); margin-bottom: 15px; border-bottom: 2px solid var(--secundario); padding-bottom: 5px;">Bienvenidos a Libromanía</h2>
+                <p>Libromanía es un proyecto de comercio digital enfocado en la distribución eficiente de útiles escolares, textos educativos y material de papelería en general para la comunidad estudiantil de Guatemala. Nuestra plataforma nace con el objetivo de modernizar los canales tradicionales de venta de materiales didácticos, facilitando una experiencia de usuario rápida, interactiva y accesible desde cualquier dispositivo.</p>
+                <br>
+                <p>A través de esta solución web, implementamos una infraestructura tecnológica robusta diseñada para gestionar de manera automatizada la interacción entre los clientes y nuestro catálogo de inventario. Nuestro enfoque está orientado a satisfacer de manera oportuna la demanda de herramientas físicas que potencian el aprendizaje y el rendimiento en los diferentes niveles académicos.</p>
+                <br>
+                <p>Con un fuerte compromiso hacia la innovación técnica y la excelencia operativa, en Libromanía aplicamos la lógica de bases de datos relacionales y el diseño de interfaces web modernas para mantener un control óptimo de existencias, garantizando la transparencia de nuestros procesos y brindando un soporte de alta calidad para cada pedido.</p>
+            </div>
+            <div class="columna-imagen">
+                <!-- Cambia "imagen-bienvenida.jpg" por la ruta de tu imagen real -->
+                <img src="img/imagen-bienvenida.jpg" alt="Estudiantes y útiles escolares de Libromanía" class="img-bloque">
+            </div>
+        </section>
+
+        <!-- SEGUNDO BLOQUE: Filosofía de Negocio Digital + Imagen al lado -->
+        <section class="bloque-seccion">
+            <div class="columna-texto">
+                <h2 style="color: var(--primario); margin-bottom: 15px; border-bottom: 2px solid var(--secundario); padding-bottom: 5px;">Filosofía de Negocio Digital</h2>
+                
+                <h3 style="color: var(--primario); margin-top: 15px; margin-bottom: 5px;">Misión</h3>
+                <p>Proveer artículos escolares y de oficina de la más alta calidad mediante una plataforma digital interactiva y eficiente, impulsando el rendimiento académico y profesional en Guatemala a través de procesos accesibles, transparentes y enfocados en el servicio integral al cliente.</p>
+                
+                <h3 style="color: var(--primario); margin-top: 15px; margin-bottom: 5px;">Visión</h3>
+                <p>Convertirnos en la librería digital y distribuidora de suministros educativos líder en la región, reconocida por la automatización avanzada de sus procesos logísticos y comerciales, la solidez técnica de sus sistemas y la innovación constante en la experiencia de comercio electrónico.</p>
+            </div>
+            <div class="columna-imagen">
+                <!-- Cambia "imagen-filosofia.jpg" por la ruta de tu imagen real -->
+                <img src="img/imagen-filosofia.jpg" alt="Misión y Visión de Libromanía" class="img-bloque">
+            </div>
+        </section>
+
     </main>
-<div id="carrito-panel" class="carrito-overlay">
-    <div class="carrito-contenido">
-        <span class="cerrar-carrito">&times;</span>
-        <h2>Tu Carrito</h2>
-        <div id="items-carrito">
-        </div>
-        <div class="carrito-total">
-            <p>Total: Q<span id="total-precio">0.00</span></p>
-            <button class="btn-comprar">Finalizar Compra</button>
+
+    <div id="carrito-panel" class="carrito-overlay">
+        <div class="carrito-contenido">
+            <span class="cerrar-carrito">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="items-carrito"></div>
+            <div class="carrito-total">
+                <p>Total: Q<span id="total-precio">0.00</span></p>
+                <button class="btn-comprar">Finalizar Compra ➔</button>
+            </div>
         </div>
     </div>
-</div>
-<div id="checkout-panel" class="carrito-overlay">
-    <div class="carrito-contenido">
+
+    <div id="checkout-panel" class="carrito-overlay">
         <span class="cerrar-checkout">&times;</span>
-        <h2>Finalizar Pedido</h2>
-        
+        <h2>Confirmar Pedido</h2>
+        <div class="resumen-final">
+            <p>Total a Pagar: Q<span id="total-checkout">0.00</span></p>
+        </div>
         <form id="formulario-pago">
             <div class="seccion-form">
-                <h3><i class="fas fa-user"></i> Datos de Envío</h3>
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="email" placeholder="Correo electrónico" required>
-                <input type="text" placeholder="Dirección exacta de entrega" required>
-                <input type="tel" placeholder="Teléfono" required>
+                <h3>Datos de Entrega</h3>
+                <input type="text" placeholder="Nombre Completo" required>
+                <input type="text" placeholder="Dirección de Envío" required>
+                <input type="tel" placeholder="Teléfono de Contacto" required>
             </div>
-
             <div class="seccion-form">
-    <h3><i class="fas fa-credit-card"></i> Método de Pago</h3>
-    <div class="opciones-pago">
-        <label class="metodo">
-            <input type="radio" name="pago" value="tarjeta" checked>
-            <span>Tarjeta Visa / Mastercard</span>
-        </label>
-        <label class="metodo">
-            <input type="radio" name="pago" value="paypal">
-            <span>PayPal</span>
-        </label>
-        <label class="metodo">
-            <input type="radio" name="pago" value="transferencia">
-            <span>Transferencia Bancaria</span>
-        </label>
-    </div>
-
-    <!-- Contenedores Dinámicos de Verificación -->
-    <div id="detalle-pago-container" style="margin-top: 15px;">
-        <!-- Campos para Tarjeta (Se muestran por defecto) -->
-        <div id="campos-tarjeta" class="metodo-detalle">
-            <input type="text" placeholder="Número de Tarjeta (16 dígitos)" maxlength="16" required>
-            <div style="display: flex; gap: 10px;">
-                <input type="text" placeholder="MM/AA" maxlength="5" style="width: 50%;" required>
-                <input type="text" placeholder="CVV" maxlength="3" style="width: 50%;" required>
+                <h3>Método de Pago</h3>
+                <div class="opciones-pago">
+                    <label class="metodo"><input type="radio" name="pago" value="tarjeta" checked> 💳 Tarjeta</label>
+                    <label class="metodo"><input type="radio" name="pago" value="paypal"> 🅿️ PayPal</label>
+                    <label class="metodo"><input type="radio" name="pago" value="transferencia"> 🏦 Transferencia</label>
+                </div>
             </div>
-        </div>
-
-        <!-- Info para PayPal -->
-        <div id="campos-paypal" class="metodo-detalle" style="display: none;">
-            <p style="font-size: 0.9rem; color: #555;">Serás redirigido a la página oficial de PayPal para verificar tu cuenta.</p>
-        </div>
-
-        <!-- Info para Transferencia -->
-        <div id="campos-transferencia" class="metodo-detalle" style="display: none;">
-            <p style="font-size: 0.85rem; background: #f0f0f0; padding: 10px; border-radius: 5px;">
-                <strong>Banco Industrial</strong><br>
-                Cuenta Monetaria: 123-456789-0<br>
-                Nombre: Libromanía S.A.
-            </p>
-            <input type="text" placeholder="Número de Boleta / Referencia">
-        </div>
-    </div>
-</div>
-
-            <div class="resumen-final">
-                <p>Total a pagar: <strong>Q<span id="total-checkout">0.00</span></strong></p>
+            <div id="campos-tarjeta" class="metodo-detalle">
+                <input type="text" placeholder="Número de Tarjeta" required>
+                <input type="text" placeholder="MM/AA" required>
+                <input type="text" placeholder="CVV" required>
             </div>
-
-            <button type="submit" class="btn-confirmar">Confirmar y Pagar</button>
+            <div id="campos-paypal" class="metodo-detalle" style="display:none;"><input type="email" placeholder="Correo PayPal"></div>
+            <div id="campos-transferencia" class="metodo-detalle" style="display:none;"><p style="font-size:0.8rem; color:#666;">Cuenta Monetaria UMG: 4589-2231-01</p></div>
+            <button type="submit" class="btn-confirmar" disabled>Confirmar Compra</button>
         </form>
     </div>
-</div>
-    <section id="contacto">
-        <div class="tarjeta-contacto">
-            <div class="encabezado-contacto">
-                <h2>Directorio Libromanía</h2>
-                <p>Atención inmediata - Equipo UMG, contáctanos presionando los siguientes botones</p>
-            </div>
-            
-            <div class="grid-contactos">
-                <!-- Ventas -->
-                <a href="tel:+502365869928" title="Llamar a Alexander">
-                    ALEXANDER GONZALEZ (VENTAS)
-                </a>
 
-                <!-- Atención al Cliente -->
-                <a href="tel:+50256135721" title="Llamar a Dany">
-                    DANY MONTEPEQUE (ATENCION)
-                </a>
-
-                <!-- Soporte Técnico -->
-                <a href="tel:+50237322554" title="Llamar a Yelstin">
-                    YELSTIN HURTADO (SOPORTE)
-                </a>
-
-                <!-- Gerencia -->
-                <a href="tel:+50243146670" title="Llamar a Liss">
-                    LISS MORALES (GERENCIA)
-                </a>
-
-                <!-- Servicio a Domicilio con la clase especial -->
-                <a href="tel:+50255159173" class="wa-link" title="Llamar a Josue">
-                     JOSUE DEL CID (SERVICIO A DOMICILIO)
-                </a>
-            </div>
-        </div>
-    </section>
-    <footer>
-    <p>&copy; <span id="year"></span> LIBROMANÍA - Todos los derechos reservados.</p>
-</footer>
     <div id="miModal" class="modal">
-    <span class="cerrar">&times;</span>
-    <img class="modal-contenido" id="imgGrande">
-    <div id="descripcion-imagen"></div>
-</div>
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imgGrande" alt="Vista ampliada">
+    </div>
 
+    <footer>
+        <p>&copy; 2026 - Libromanía | Proyecto Final UMG - Facultad de Ingeniería en Sistemas</p>
+    </footer>
+
+    <div class="carrito-overlay">
+        <div class="carrito-contenido">
+            <span class="cerrar-carrito">&times;</span>
+            <h2>Tu Carrito</h2>
+            
+            <div id="items-carrito"></div>
+            
+            <div class="carrito-total">
+                Total: Q<span id="total-precio">0.00</span>
+            </div>
+            <button class="btn-comprar">Finalizar Compra &rarr;</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

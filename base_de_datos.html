@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libromanía - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+     <header class="header-estatico">
+    <div class="header-container">
+        <div class="header-top">
+            <div class="logo-imagen">
+               <a href="index.html">  
+                <img src="img/logo2.png" alt="Logo de Libromanía" class="logo-header">
+               </a>
+            </div>
+            
+            <div class="busqueda-contenedor-header">
+    <form action="#">
+        <input type="text" placeholder="¿Qué útil escolar buscas hoy?" name="search">
+        <button type="submit">🔍</button>
+    </form>
+</div>
+        
+            <div class="carrito-zona">
+                <a href="#" id="abrir-carrito">
+                    <i class="fas fa-shopping-cart"></i> 
+                    <span>Mi Carrito (<span id="contador-carrito">0</span>)</span>
+                </a>
+            </div>
+        </div>
+
+        <nav class="nav-3d">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="base_de_datos.html">Base de Datos</a>
+    <a href="reportes.html">Reportes</a>
+    <a href="tecnologias.html">Tecnologías</a>
+    <a href="equipo.html">Nuestro Equipo</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+    </div>
+</header>
+
+<main class="contenedor-principal">
+        
+        <h2>Diagrama Entidad-Relación</h2>
+        <img src="img/diagrama er.jpg" alt="Diagrama Entidad-Relación" class="diagrama-er">
+
+       <h3>Descripción de Entidades</h3>
+<table class="tabla-base-datos">
+    <thead>
+        <tr>
+            <th>Entidad</th>
+            <th>Atributos</th>
+            <th>Rol en el negocio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Detalleventa</strong></td>
+            <td>id INT, id_venta INT, id_producto INT, cantidad INT, subtotal DECIMAL(10,2) </td>
+            <td>Representa todos los detalles de cada venta</td>
+        </tr>
+        <tr>
+            <td><strong>Venta</strong></td>
+            <td>id INT, fecha DATE, total DECIMAL(10,2), id_cliente INT</td>
+            <td>Registra la venta</td>
+        </tr>
+        <tr>
+            <td><strong>Clientes</strong></td>
+            <td>ID, Fecha, Total, ID_Usuario</td>
+            <td>Registra la transacción de compra realizada por un usuario.</td>
+        </tr>
+        <tr>
+            <td><strong>Producto</strong></td>
+            <td>id INT, nombre VARCHAR(100), precio DECIMAL(10,2), categoria VARCHAR(50), stock INT, id_proveedor INT</td>
+            <td>Registra la cantidad de producto que hay en stock</td>
+        </tr>
+        <tr>
+            <td><strong>Proveedor</strong></td>
+            <td>id INT, nombre VARCHAR(100), telefono VARCHAR(20), direccion VARCHAR(150), correo VARCHAR(100), compra INT</td>
+            <td>Aqui tenemos el registro de la informacion de los proveedores</td>
+        </tr>
+        <tr>
+            <td><strong>Compra</strong></td>
+            <td>id INT, fecha_compra DATE, id_proveedor INT, total_compra DECIMAL(10,2)</td>
+            <td>Registra la compra y nos da el calculo de que salio de stock</td>
+        </tr>
+        <tr>
+            <td><strong>Detallecompra</strong></td>
+            <td>id INT, id_compra INT, id_producto INT, cantidad INT, precio_unitario DECIMAL(10,2), subtotal DECIMAL(10,2)</td>
+            <td>Nos da todos los detalles de la compra hecha</td>
+        </tr>
+    </tbody>
+</table>
+    
+
+    <div class="consultas">
+        <h3>SECCION DE CONSULTAS</h3>
+        <h3>Consulta 1: Ordenamiento Alfabético de Inventario</h3>
+        <p>Organiza todo tu catálogo de productos de la A a la Z. Es ideal para generar listas impresas o vistas rápidas donde sea fácil localizar un artículo visualmente por su nombre.</p>
+        <pre><code>SELECT * FROM PRODUCTO ORDER BY NOMBRE ASC;</code></pre><br>
+        
+        <h3>Consulta 2: Filtro por Categoría Específica (Electrónicos)</h3>
+        <p>Aísla del inventario únicamente los productos tecnológicos (como calculadoras o memorias USB). Ayuda al negocio a auditar secciones específicas de la tienda.</p>
+        <pre><code>SELECT * FROM PRODUCTO WHERE categoria = 'Electrónico';</code></pre><br>
+
+         <h3>Consulta 3: Filtro de Productos de Alto Valor</h3>
+        <p>Muestra los artículos premium o más costosos de la librería (cuyo valor supera los Q50.00). Útil para análisis de margen de ganancia o estrategias de seguridad en tienda.</p>
+        <pre><code>SELECT * FROM PRODUCTO WHERE PRECIO > 50.00;</code></pre><br>
+
+         <h3>Consulta 4: Alerta de Stock Crítico (Bajo Inventario)</h3>
+        <p>Funciona como un sistema de alerta temprana. Te muestra qué productos tienen menos de 10 unidades disponibles para que sepas exactamente qué pedirle a los proveedores antes de quedarte en cero.</p>
+        <pre><code>SELECT * FROM PRODUCTO WHERE STOCK < 10;</code></pre><br>
+
+        <h3>Consulta 5: Reporte de Ventas Mensual (Periodo Específico)</h3>
+        <p>Extrae el historial de transacciones ocurridas en un rango de fechas específico (en este caso, todo el mes de abril de 2026). Es la consulta clave para hacer cierres de mes y balances financieros.</p>
+        <pre><code>SELECT * FROM VENTA WHERE FECHA BETWEEN '2026-04-01' AND '2026-04-30';</code></pre><br>
+
+        <h3>Consulta 6: Rendimiento Financiero por Categoría de Producto</h3>
+        <p>Suma los ingresos totales generados por cada categoría (Útiles, Libros, Arte, etc.) y los ordena de menor a mayor venta. Le permite al administrador saber cuál sección es la más rentable y cuál se mueve menos.</p>
+        <pre><code>SELECT p.categoria, SUM(dv.subtotal) AS total_vendido
+                   FROM producto p, detalleventa dv, venta v
+                   WHERE p.id = dv.id_producto AND dv.id_venta = v.id
+                   GROUP BY p.categoria
+                   ORDER BY total_vendido;</code></pre><br>
+
+        <h3>Consulta 7: Historial Detallado de Ventas (Auditoría de Clientes)</h3>
+        <p>Rompe los códigos y une 4 tablas distintas (VENTA, CLIENTE, DETALLEVENTA y PRODUCTO) usando JOIN para mostrar un reporte legible para humanos: qué número de venta fue, en qué fecha, quién compró, qué artículo se llevó, cuántos y cuánto pagó en total.</p>
+        <pre><code>ELECT v.id, v.fecha, c.nombre AS cliente, p.nombre AS producto, dv.cantidad, dv.subtotal
+                   FROM VENTA v
+                   JOIN CLIENTE c ON v.id_cliente = c.id
+                   JOIN DETALLEVENTA dv ON v.id = dv.id_venta
+                   JOIN PRODUCTO p ON dv.id_producto = p.id;</code></pre><br>
+
+        <h3>Consulta 8: Historial de Abastecimiento por Proveedor</h3>
+        <p>Cruza la información de las compras de la empresa para mostrar un listado ordenado alfabéticamente por proveedor. Te dice qué mercancía le compraste a cada distribuidor, qué cantidad ingresó a bodega y cuánto le pagaste al negocio proveedor.</p>
+        <pre><code>SELECT p.nombre proveedor, pr.nombre producto, dc.cantidad, dc.subtotal
+                   FROM compra c, proveedor p, detallecompra dc, producto pr
+                   WHERE c.id_proveedor = p.id AND c.id = dc.id_compra AND dc.id_producto = pr.id
+                   ORDER BY p.nombre;</code></pre><br>
+
+        <h3>Consulta 9: Informe General de Rotación de Inventario e Ingresos</h3>
+        <p>Es el reporte maestro del negocio. Muestra producto por producto cuántas unidades totales se han vendido y cuánto dinero han generado. Al usar un LEFT JOIN, incluye mágicamente en la lista incluso a los productos que tienen 0 ventas, permitiendo identificar el "producto hueso" o estancado.</p>
+        <pre><code>SELECT p.id AS codigo_producto, p.nombre AS nombre_producto, p.categoria AS categoria,
+                   IFNULL(SUM(d.cantidad), 0) AS total_unidades_vendidas,
+                   IFNULL(SUM(d.subtotal), 0) AS total_ingresos_producto
+                   FROM PRODUCTO p
+                   LEFT JOIN DETALLEVENTA d ON p.id = d.id_producto
+                   GROUP BY p.id, p.nombre, p.categoria
+                   ORDER BY total_unidades_vendidas ASC;</code></pre><br>
+
+        <h3>Diagrama de Flujo y Pseudocódigo</h3><br>
+     </div>
+
+<a href="#expandir-diagrama" class="enlace-modal">
+    <img src="img/diagrama-flujo.png" alt="Diagrama de flujo" class="img-vista-previa">
+    <span class="indicador-clic">🔍 Haz clic sobre el diagrama para ampliarlo</span>
+</a>
+
+<div id="expandir-diagrama" class="modal-mapa">
+    <a href="#cerrar" class="modal-cerrar-fondo"></a>
+    <div class="modal-contenido">
+        <a href="#cerrar" class="btn-cerrar-modal">&times;</a>
+        <img src="img/diagrama-flujo.png" alt="Diagrama de flujo expandido">
+    </div>
+</div><br>
+
+<div class="contenedor-pseudocodigo">
+    <div class="encabezado-cuadro">
+        <div class="botones-falsos">
+            <span class="punto rojo"></span>
+            <span class="punto amarillo"></span>
+            <span class="punto verde"></span>
+        </div>
+        <span class="titulo-cuadro">Algoritmo PSeInt - Facturación Libromanía</span>
+    </div>
+    <div class="cuerpo-cuadro">
+<pre><code>Algoritmo libreriaLibroMania
+    Definir numero, nombre, articulo Como Caracter
+    Definir cantidad, precio, total Como Real
+
+    Escribir "LIBRERIA ESCOLAR"
+    Escribir "Numero de factura: "
+    Leer numero
+    Escribir "Nombre del cliente: "
+    Leer nombre
+    Escribir "Articulo: "
+    Leer articulo
+    Escribir "Cantidad: "
+    Leer cantidad
+    Escribir "Precio unitario: "
+    Leer precio
+
+    total = cantidad * precio
+
+    Escribir "----------------------------"
+    Escribir "       FACTURA"
+    Escribir "Factura Nº: ", numero
+    Escribir "Cliente: ", nombre
+    Escribir "Articulo: ", articulo
+    Escribir "Total a pagar: Q.", total
+    Escribir "----------------------------"
+    FinAlgoritmo</code></pre>
+    </div>
+</div>
+    </main>
+
+    <div class="carrito-overlay">
+        <div class="carrito-contenido">
+            <span class="cerrar-carrito">&times;</span>
+            <h2>Tu Carrito</h2>
+            
+            <div id="items-carrito"></div>
+            
+            <div class="carrito-total">
+                Total: Q<span id="total-precio">0.00</span>
+            </div>
+            <button class="btn-comprar">Finalizar Compra &rarr;</button>
+        </div>
+    </div>
+
+    <div id="checkout-panel" class="carrito-overlay">
+        <span class="cerrar-checkout">&times;</span>
+        <h2>Confirmar Pedido</h2>
+        <div class="resumen-final">
+            <p>Total a Pagar: Q<span id="total-checkout">0.00</span></p>
+        </div>
+        <form id="formulario-pago">
+            <div class="seccion-form">
+                <h3>Datos de Entrega</h3>
+                <input type="text" placeholder="Nombre Completo" required>
+                <input type="text" placeholder="Dirección de Envío" required>
+                <input type="tel" placeholder="Teléfono de Contacto" required>
+            </div>
+            <div class="seccion-form">
+                <h3>Método de Pago</h3>
+                <div class="opciones-pago">
+                    <label class="metodo"><input type="radio" name="pago" value="tarjeta" checked> 💳 Tarjeta</label>
+                    <label class="metodo"><input type="radio" name="pago" value="paypal"> 🅿️ PayPal</label>
+                    <label class="metodo"><input type="radio" name="pago" value="transferencia"> 🏦 Transferencia</label>
+                </div>
+            </div>
+            <div id="campos-tarjeta" class="metodo-detalle">
+                <input type="text" placeholder="Número de Tarjeta" required>
+                <input type="text" placeholder="MM/AA" required>
+                <input type="text" placeholder="CVV" required>
+            </div>
+            <div id="campos-paypal" class="metodo-detalle" style="display:none;"><input type="email" placeholder="Correo PayPal"></div>
+            <div id="campos-transferencia" class="metodo-detalle" style="display:none;"><p style="font-size:0.8rem; color:#666;">Cuenta Monetaria UMG: 4589-2231-01</p></div>
+            <button type="submit" class="btn-confirmar" disabled>Confirmar Compra</button>
+        </form>
+    </div>
+    
+  <footer>
+   <p>&copy; 2026 - Libromanía | Proyecto Final UMG - Facultad de Ingeniería en Sistemas</p>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libromanía - Reportes de Sistema</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+
+     <header class="header-estatico">
+    <div class="header-container">
+        <div class="header-top">
+            <div class="logo-imagen">
+               <a href="index.html">  
+                <img src="img/logo2.png" alt="Logo de Libromanía" class="logo-header">
+               </a>
+            </div>
+            
+            <div class="busqueda-contenedor-header">
+    <form action="#">
+        <input type="text" placeholder="¿Qué útil escolar buscas hoy?" name="search">
+        <button type="submit">🔍</button>
+    </form>
+</div>
+
+            <div class="carrito-zona">
+                <a href="#" id="abrir-carrito">
+                    <i class="fas fa-shopping-cart"></i> 
+                    <span>Mi Carrito (<span id="contador-carrito">0</span>)</span>
+                </a>
+            </div>
+        </div>
+
+        <nav class="nav-3d">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="base_de_datos.html">Base de Datos</a>
+    <a href="reportes.html">Reportes</a>
+    <a href="tecnologias.html">Tecnologías</a>
+    <a href="equipo.html">Nuestro Equipo</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+    </div>
+</header>
+
+    <main class="main-reportes-contenedor">
+    
+    <section class="bloque-seccion bienvenida-panel">
+        <div class="bienvenida-texto-bloque">
+            <h2 class="titulo-bienvenida-modulo">Panel de Control y Reportes Operativos</h2>
+            <p>Bienvenido al módulo de reportería analítica de <strong>Libromanía</strong>. En esta sección se consolidan los datos transaccionales de la plataforma para fines de auditoría, control de inventario y análisis de demanda escolar en el sistema.</p>
+        </div>
+    </section>
+
+    <div class="contenedor-reporte-unico-3d">
+        <h2 class="titulo-reporte-seccion">📦 Reportes del Negocio</h2>
+        <p class="sub-actual">Métrica del Sistema: Historial de Transacciones Mensuales (Auditoría Financiera)</p>
+        
+        <div class="cuerpo-reporte-layout">
+            <div class="columna-tabla-datos">
+                <table class="tabla-reporte-estilizada">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Fecha de Transacción</th>
+                            <th>Total Generado</th>
+                            <th>ID Cliente</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>VENTA-001</code></td>
+                            <td>2026-04-20</td>
+                            <td>Q100.00</td>
+                            <td>1</td>
+                            <td><span class="badge badge-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-002</code></td>
+                            <td>2026-04-21</td>
+                            <td>Q50.00</td>
+                            <td>2</td>
+                            <td><span class="badge badge-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-003</code></td>
+                            <td>2026-04-22</td>
+                            <td>Q75.00</td>
+                            <td>3</td>
+                            <td><span class="badge badge-warning">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-004</code></td>
+                            <td>2026-04-23</td>
+                            <td>Q120.00</td>
+                            <td>4</td>
+                            <td><span class="badge badge-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>Venta-005</code></td>
+                            <td>2026-04-24</td>
+                            <td>Q60.00</td>
+                            <td>5</td>
+                            <td><span class="badge badge-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-006</code></td>
+                            <td>2026-04-25</td>
+                            <td>Q200.00</td>
+                            <td>6</td>
+                            <td><span class="badge badge-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-007</code></td>
+                            <td>2026-04-26</td>
+                            <td>Q30.00</td>
+                            <td>7</td>
+                            <td><span class="badge badge-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-008</code></td>
+                            <td>2026-04-27</td>
+                            <td>Q90.00</td>
+                            <td>8</td>
+                            <td><span class="badge badge-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-009</code></td>
+                            <td>2026-04-28</td>
+                            <td>Q150.00</td>
+                            <td>9</td>
+                            <td><span class="badge badge-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-010</code></td>
+                            <td>2026-04-29</td>
+                            <td>Q80.00</td>
+                            <td>10</td>
+                            <td><span class="badge badge-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-011</code></td>
+                            <td>2026-04-30</td>
+                            <td>Q95.00</td>
+                            <td>11</td>
+                            <td><span class="badge badge-success">Completada</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="caja-decision-estrategica">
+                    <h4>💡 Decisión de Negocio (Análisis Ejecutivo)</h4>
+                    <p>Al evaluar los datos del mes de abril arrojados por el sistema, se identifica un flujo constante de transacciones diarias con un repunte significativo de ingresos (Día Pico) el <strong>25 de abril</strong> que generó un total de <strong>Q200.00</strong>. Como estrategia comercial, se determina el lanzamiento de promociones orientadas a 'Kits Escolares de Fin de Mes' entre los días 20 y 25 de cada periodo. Esto capitalizará el presupuesto de los clientes en fechas de alta liquidez, optimizando de igual forma las rutas del equipo de entregas a domicilio para esos días de mayor demanda.</p>
+                </div>
+            </div>
+
+            <div class="columna-visual-grafica">
+                <div class="contenedor-vista-previa-3d" onclick="abrirModalReporte('img-reporte-1')">
+                    <img id="img-reporte-1" src="img/consulta 5.jpg" alt="Gráfica de Existencias Críticas">
+                    <div class="capa-hover-zoom">
+                        <span>🔍 Clic para Ampliar</span>
+                    </div>
+                </div>
+                <a href="img/consulta 5.jpg" download="Reporte_Existencias_Libromania.png" class="btn-descargar-azul">
+                    <i class="fas fa-download"></i> Descargar Imagen
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contenedor-reporte-unico-3d">
+        <h2 class="titulo-reporte-seccion">📦 Reportes del Negocio</h2>
+        <p class="sub-actual">Métrica del Sistema: Rendimiento Financiero por Categoría de Producto</p>
+        
+        <div class="cuerpo-reporte-layout">
+            <div class="columna-tabla-datos">
+                <table class="tabla-reporte-estilizada">
+                    <thead>
+                        <tr>
+                            <th>Nivel de Venta</th>
+                            <th>Categoría del Producto</th>
+                            <th>Total Vendido</th>
+                            <th>Estado Comercial</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>CAT-001</code></td>
+                            <td>Oficina</td>
+                            <td>Q198.00</td>
+                            <td><span class="badge badge-warning">Bajo Rendimiento</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>CAT-002</code></td>
+                            <td>Arte</td>
+                            <td>Q332.00</td>
+                            <td><span class="badge badge-warning">Rendimiento Regular</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>CAT-003</code></td>
+                            <td>Accesorios</td>
+                            <td>Q630.00</td>
+                            <td><span class="badge badge-success">Buen Rendimiento</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>CAT-004</code></td>
+                            <td>Libros</td>
+                            <td>Q651.00</td>
+                            <td><span class="badge badge-success">Buen Rendimiento</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>CAT-005</code></td>
+                            <td>Electrónico</td>
+                            <td>Q830.00</td>
+                            <td><span class="badge badge-success">Alta Rotación</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>CAT-006</code></td>
+                            <td>Útiles</td>
+                            <td>Q836.50</td>
+                            <td><span class="badge badge-success">Líder en Ventas</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="caja-decision-estrategica">
+                    <h4>💡 Decisión de Negocio (Análisis de Rentabilidad por Categoría)</h4>
+                    <p>Al analizar los ingresos acumulados, se identifica una brecha significativa entre las secciones del negocio: <strong>Útiles (Q836.50)</strong> y <strong>Electrónico (Q830.00)</strong> se consolidan como los pilares financieros de la librería, mientras que <strong>Oficina (Q198.00)</strong> presenta el rendimiento más bajo. La decisión comercial inmediata es reducir el presupuesto de adquisición de stock estancado en la categoría de Oficina, y reinvertir ese capital en la compra de tecnología o útiles de alta rotación, maximizando así el uso del espacio en bodega y acelerando el retorno de inversión.</p>
+                </div>
+            </div>
+
+            <div class="columna-visual-grafica">
+                <div class="contenedor-vista-previa-3d" onclick="abrirModalReporte('img-reporte-2')">
+                    <img id="img-reporte-2" src="img/consulta 6.jpg" alt="Gráfica de Ingresos Mensuales">
+                    <div class="capa-hover-zoom">
+                        <span>🔍 Clic para Ampliar</span>
+                    </div>
+                </div>
+                <a href="img/consulta 6.jpg" download="Reporte_Ingresos_Libromania.png" class="btn-descargar-azul">
+                    <i class="fas fa-download"></i> Descargar Imagen
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contenedor-reporte-unico-3d">
+        <h2 class="titulo-reporte-seccion">📦 Reportes del Negocio</h2>
+        <p class="sub-actual">Métrica del Sistema: Historial Detallado de Auditoría de Ventas y Productos</p>
+        
+        <div class="cuerpo-reporte-layout">
+            <div class="columna-tabla-datos">
+                <table class="tabla-reporte-estilizada">
+                    <thead>
+                        <tr>
+                            <th>ID Venta</th>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Producto Adquirido</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>VENTA-001</code></td>
+                            <td>2026-04-20</td>
+                            <td>Juan Pérez</td>
+                            <td>Cuaderno</td>
+                            <td>5 uds</td>
+                            <td><span class="badge badge-success">Q52.50</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-002</code></td>
+                            <td>2026-04-21</td>
+                            <td>Ana López</td>
+                            <td>Lapicero</td>
+                            <td>10 uds</td>
+                            <td><span class="badge badge-success">Q20.00</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-003</code></td>
+                            <td>2026-04-22</td>
+                            <td>Carlos Ruiz</td>
+                            <td>Libro Matemática</td>
+                            <td>1 ud</td>
+                            <td><span class="badge badge-success">Q50.00</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-004</code></td>
+                            <td>2026-04-23</td>
+                            <td>María Díaz</td>
+                            <td>Mochila</td>
+                            <td>1 ud</td>
+                            <td><span class="badge badge-success">Q120.00</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-005</code></td>
+                            <td>2026-04-24</td>
+                            <td>Pedro Gómez</td>
+                            <td>Regla</td>
+                            <td>6 uds</td>
+                            <td><span class="badge badge-success">Q30.00</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>VENTA-006</code></td>
+                            <td>2026-04-25</td>
+                            <td>Lucía Torres</td>
+                            <td>Borrador</td>
+                            <td>2 uds</td>
+                            <td><span class="badge badge-success">Q160.00</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="caja-decision-estrategica">
+                    <h4>💡 Decisión de Negocio (Análisis de Canastas y Comportamiento de Compra)</h4>
+                    <p>Al auditar de forma relacional el historial, se observa una fuerte tendencia en la adquisición de múltiples unidades por transacción en artículos de papelería base (como los <strong>10 lapiceros de Ana López</strong> o los <strong>5 cuadernos de Juan Pérez</strong>), mientras que los artículos de mayor valor unitario como las mochilas mantienen compras individuales. Se determina estructurar estrategias de empaquetamiento comercial o 'Kits Escolares Mayoristas' para la temporada alta, optimizando los márgenes de ganancia en productos de alta rotación y volumen.</p>
+                </div>
+            </div>
+
+            <div class="columna-visual-grafica">
+                <div class="contenedor-vista-previa-3d" onclick="abrirModalReporte('img-reporte-3')">
+                    <img id="img-reporte-3" src="img/consulta 7.jpg" alt="Gráfica de Productos Líderes">
+                    <div class="capa-hover-zoom">
+                        <span>🔍 Clic para Ampliar</span>
+                    </div>
+                </div>
+                <a href="img/consulta 7.jpg" download="Reporte_Top_Rotacion_Libromania.png" class="btn-descargar-azul">
+                    <i class="fas fa-download"></i> Descargar Imagen
+                </a>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<div id="lightbox-reportes" class="lightbox-overlay" onclick="cerrarModalReporte()">
+    <span class="lightbox-cerrar-btn">&times;</span>
+    <img class="lightbox-img-fullscreen" id="img-fullscreen-display">
+</div>
+
+    <footer>
+        <p>&copy; 2026 - Libromanía | Proyecto Final UMG - Facultad de Ingeniería en Sistemas</p>
+    </footer>
+
+    <div class="carrito-overlay">
+        <div class="carrito-contenido">
+            <span class="cerrar-carrito">&times;</span>
+            <h2>Tu Carrito</h2>
+            
+            <div id="items-carrito"></div>
+            
+            <div class="carrito-total">
+                Total: Q<span id="total-precio">0.00</span>
+            </div>
+            <button class="btn-comprar">Finalizar Compra &rarr;</button>
+        </div>
+    </div>
+
+    <div id="checkout-panel" class="carrito-overlay">
+        <span class="cerrar-checkout">&times;</span>
+        <h2>Confirmar Pedido</h2>
+        <div class="resumen-final">
+            <p>Total a Pagar: Q<span id="total-checkout">0.00</span></p>
+        </div>
+        <form id="formulario-pago">
+            <div class="seccion-form">
+                <h3>Datos de Entrega</h3>
+                <input type="text" placeholder="Nombre Completo" required>
+                <input type="text" placeholder="Dirección de Envío" required>
+                <input type="tel" placeholder="Teléfono de Contacto" required>
+            </div>
+            <div class="seccion-form">
+                <h3>Método de Pago</h3>
+                <div class="opciones-pago">
+                    <label class="metodo"><input type="radio" name="pago" value="tarjeta" checked> 💳 Tarjeta</label>
+                    <label class="metodo"><input type="radio" name="pago" value="paypal"> 🅿️ PayPal</label>
+                    <label class="metodo"><input type="radio" name="pago" value="transferencia"> 🏦 Transferencia</label>
+                </div>
+            </div>
+            <div id="campos-tarjeta" class="metodo-detalle">
+                <input type="text" placeholder="Número de Tarjeta" required>
+                <input type="text" placeholder="MM/AA" required>
+                <input type="text" placeholder="CVV" required>
+            </div>
+            <div id="campos-paypal" class="metodo-detalle" style="display:none;"><input type="email" placeholder="Correo PayPal"></div>
+            <div id="campos-transferencia" class="metodo-detalle" style="display:none;"><p style="font-size:0.8rem; color:#666;">Cuenta Monetaria UMG: 4589-2231-01</p></div>
+            <button type="submit" class="btn-confirmar" disabled>Confirmar Compra</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
