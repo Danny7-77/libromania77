@@ -2308,9 +2308,16 @@ body {
     overflow-x: hidden;
 }
 
-/* Escala de escritorio para celulares */
+/* Esto hace que tu web sea "fluida" y se adapte al tamaño de cualquier pantalla */
 body {
-    width: 1200px;
-    margin: 0 auto;
-    overflow-x: hidden;
+    width: 100% !important;
+    max-width: 1200px !important; /* Mantiene tu diseño de 1200px máximo */
+    margin: 0 auto !important;
+    overflow-x: hidden; /* Evita que la página se mueva a los lados */
+}
+
+/* Esta regla hace que TODAS las imágenes se ajusten automáticamente */
+img {
+    max-width: 100% !important;
+    height: auto !important;
 }
