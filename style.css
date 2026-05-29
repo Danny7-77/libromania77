@@ -2295,3 +2295,59 @@ main {
     50% { transform: translateY(-8px); }
     100% { transform: translateY(0px); }
 }
+
+/* ========================================================
+    CORRECCIONES PARA MÓVILES (Pegar al FINAL del archivo)
+   ======================================================== */
+
+@media (max-width: 768px) {
+    /* 1. ELIMINAR EL SCROLL HORIZONTAL FANTASMA */
+    body {
+        overflow-x: hidden !important; 
+        width: 100%;
+    }
+
+    /* 2. ARREGLAR LA BARRA DE BÚSQUEDA (El principal problema) */
+    /* Aplica a cualquier input de texto dentro de tu cabecera */
+    input[type="text"], input[type="search"], .buscador {
+        width: 90% !important; 
+        max-width: 100%;
+        box-sizing: border-box !important;
+        margin: 0 auto 15px auto !important; /* Centrado y con espacio abajo */
+        display: block;
+    }
+
+    /* 3. OPTIMIZAR LOS BOTONES 3D PARA DEDOS */
+    .nav-3d {
+        padding: 5px 10px;
+        gap: 8px; /* Reducimos el espacio entre ellos */
+    }
+    
+    .nav-3d a {
+        padding: 10px 12px;
+        font-size: 0.75rem; /* Letra un poco más pequeña */
+        flex-grow: 1; /* Esto hace que se estiren para llenar el espacio vacío */
+        text-align: center;
+    }
+
+    /* 4. EVITAR QUE EL CARRUSEL ROMPA LOS LADOS */
+    .carrusel-contenedor {
+        width: 100% !important;
+        left: 0 !important;
+        transform: none !important;
+        border-radius: 0;
+    }
+
+    .carrusel-slide img {
+        height: 200px !important; /* Altura perfecta para vista vertical */
+    }
+
+    /* 5. DAR RESPIRACIÓN A LOS CONTENEDORES (Para que no peguen al borde) */
+    .contenedor-principal, 
+    .bienvenida-panel, 
+    .seccion-contacto-container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box;
+    }
+}
