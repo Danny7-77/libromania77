@@ -2297,50 +2297,19 @@ main {
 }
 
 /* ========================================================
-    MODO ESCRITORIO ESTRICTO (Fuerza la vista de PC)
+   🚀 ESCALADO FORZADO: Mantiene tu diseño de PC intacto
    ======================================================== */
 
-html, body {
-    /* Obliga al navegador a renderizar como si fuera un monitor ancho */
-    min-width: 1200px !important; 
-    overflow-x: auto !important;
-}
-
-/* Evita que los botones del menú se apilen en varias filas */
-.nav-3d {
-    flex-wrap: nowrap !important;
-    min-width: 1200px !important;
-}
-
-/* Protege el encabezado para que el buscador y el carrito no se aplasten */
-.header-top {
-    min-width: 1200px !important;
-}
-
-/* ========================================================
-    AJUSTE DE ESCALA (Expande los paneles al 100%)
-   ======================================================== */
-
-.bienvenida-panel,
-.filosofia-panel,
-.carrusel-contenedor,
-.contenedor-principal {
-    width: 96% !important; /* Que ocupe casi todo el ancho disponible */
-    max-width: 1180px !important; /* Límite máximo alineado con la PC */
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-sizing: border-box !important;
-}
-
-/* Forzar que la imagen del carrusel llene su nuevo contenedor expandido */
-.carrusel-slide img {
-    width: 100% !important;
-    object-fit: cover !important;
-}
-
-/* Opcional: Aumentar un poco el tamaño del texto para compensar el zoom del celular */
-.bienvenida-panel p,
-.filosofia-panel p {
-    font-size: 1.15rem !important;
-    line-height: 1.6 !important;
+@media screen and (max-width: 900px) {
+    body {
+        /* Define un ancho fijo para que el celular no intente reajustar */
+        width: 1200px !important; 
+        
+        /* Escala todo el cuerpo del sitio para que quepa en la pantalla */
+        transform-origin: top left;
+        transform: scale(0.45); /* 0.45 es el factor de zoom (45% del tamaño real) */
+        
+        /* Asegura que el resto del espacio se maneje bien */
+        overflow-x: hidden;
+    }
 }
