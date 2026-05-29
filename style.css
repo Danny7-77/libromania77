@@ -2297,16 +2297,20 @@ main {
 }
 
 /* ========================================================
-   🚀 ESCALADO TOTAL DESDE CSS (Sin tocar HTML)
+   FORZAR MODO ESCRITORIO (Escala de zoom fija)
    ======================================================== */
 
-@media screen and (max-width: 1200px) {
-    /* 1. Obligamos al cuerpo a mantener un ancho fijo de 1200px */
+@media screen and (max-width: 1024px) {
     body {
-        width: 1200px !important;
-        overflow-x: hidden !important; /* Evita que se mueva a los lados */
+        /* Fijamos el ancho que quieres que el navegador simule */
+        width: 1200px !important; 
+        
+        /* Esto le dice al navegador: "No reacomodes nada, 
+           solo escala toda la página para que quepa en el ancho" */
+        transform: scale(0.4); 
         transform-origin: top left;
-        /* 2. Escalamos todo el cuerpo según el ancho de la pantalla */
-        transform: scale(0.33); 
+        
+        /* Evita scroll horizontal innecesario */
+        overflow-x: hidden;
     }
 }
