@@ -2297,70 +2297,22 @@ main {
 }
 
 /* ========================================================
-   📱 SOLUCIÓN DE EMERGENCIA: EFECTO PC EN CELULAR
-   (Pegar al FINAL del archivo para forzar la estructura)
+   🖥️ MODO ESCRITORIO ESTRICTO (Fuerza la vista de PC)
    ======================================================== */
 
-@media screen and (max-width: 1024px) {
-    /* 1. FORZAR EL HEADER A UNA SOLA FILA (Evita el apilado) */
-    .header-top {
-        display: flex !important;
-        flex-direction: row !important; /* Fuerza línea horizontal */
-        justify-content: space-between !important;
-        align-items: center !important;
-        gap: 5px !important;
-        padding: 0 5px !important;
-    }
+html, body {
+    /* Obliga al navegador a renderizar como si fuera un monitor ancho */
+    min-width: 1200px !important; 
+    overflow-x: auto !important;
+}
 
-    /* Ajuste de tamaños para que quepan */
-    .logo-imagen {
-        width: 80px !important; /* Muy pequeño para caber */
-        height: 80px !important;
-        flex-shrink: 0 !important;
-    }
+/* Evita que los botones del menú se apilen en varias filas */
+.nav-3d {
+    flex-wrap: nowrap !important;
+    min-width: 1200px !important;
+}
 
-    .busqueda-contenedor-header form {
-        width: auto !important;
-        flex-grow: 1 !important;
-        max-width: 150px !important; /* Forzamos tamaño pequeño */
-        padding: 2px 10px !important;
-        border-radius: 20px !important;
-    }
-    .busqueda-contenedor-header input {
-        font-size: 0.7rem !important; /* Texto muy pequeño */
-        padding: 4px !important;
-    }
-
-    .carrito-zona a {
-        font-size: 0.65rem !important; /* Texto del carrito pequeño */
-        gap: 2px !important;
-        flex-shrink: 0 !important;
-    }
-
-    /* 2. FORZAR EL MENÚ A UNA SOLA FILA (Layout de PC) */
-    /* Nota: Esto mantendrá la estructura, pero podría requerir scroll horizontal */
-    .nav-header-estatico ul {
-        display: flex !important;
-        flex-direction: row !important; /* Fuerza línea horizontal */
-        flex-wrap: nowrap !important; /* Evita que los botones bajen */
-        overflow-x: auto !important; /* Permite scroll horizontal para ver los botones si no caben */
-        gap: 4px !important;
-        justify-content: flex-start !important;
-        margin-top: 10px !important;
-        padding: 0 5px 10px 5px !important;
-        -webkit-overflow-scrolling: touch; /* Scroll suave en iPhones */
-    }
-
-    /* Botones muy pequeños para maximizar la visibilidad */
-    .nav-header-estatico a {
-        font-size: 0.6rem !important;
-        padding: 4px 6px !important;
-        border-radius: 4px !important;
-        white-space: nowrap !important; /* Evita que el texto interno baje */
-    }
-
-    /* 3. EVITAR SCROLL HORIZONTAL DE TODA LA PÁGINA (Solo las tablas/menús) */
-    body {
-        overflow-x: hidden !important;
-    }
+/* Protege el encabezado para que el buscador y el carrito no se aplasten */
+.header-top {
+    min-width: 1200px !important;
 }
