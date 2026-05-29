@@ -2207,6 +2207,11 @@ main {
 /* =========================================
     7. AJUSTES PARA CELULARES (EL FINAL)
    ========================================= */
+   /* Esto libera a los elementos para que el bloque @media pueda controlarlos */
+ header, .header-top, .busqueda-contenedor, nav {
+    width: 100% !important;
+    max-width: 100% !important;
+}
 @media screen and (max-width: 768px) {
     
     /* 1. Ajuste del Título Principal - Para que no se corte */
