@@ -2297,7 +2297,7 @@ main {
 }
 
 /* ========================================================
-   🖥️ MODO ESCRITORIO ESTRICTO (Fuerza la vista de PC)
+    MODO ESCRITORIO ESTRICTO (Fuerza la vista de PC)
    ======================================================== */
 
 html, body {
@@ -2315,4 +2315,32 @@ html, body {
 /* Protege el encabezado para que el buscador y el carrito no se aplasten */
 .header-top {
     min-width: 1200px !important;
+}
+
+/* ========================================================
+    AJUSTE DE ESCALA (Expande los paneles al 100%)
+   ======================================================== */
+
+.bienvenida-panel,
+.filosofia-panel,
+.carrusel-contenedor,
+.contenedor-principal {
+    width: 96% !important; /* Que ocupe casi todo el ancho disponible */
+    max-width: 1180px !important; /* Límite máximo alineado con la PC */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Forzar que la imagen del carrusel llene su nuevo contenedor expandido */
+.carrusel-slide img {
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+/* Opcional: Aumentar un poco el tamaño del texto para compensar el zoom del celular */
+.bienvenida-panel p,
+.filosofia-panel p {
+    font-size: 1.15rem !important;
+    line-height: 1.6 !important;
 }
