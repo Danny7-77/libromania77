@@ -2296,15 +2296,41 @@ main {
     100% { transform: translateY(0px); }
 }
 
-/* ========================================================
-   MODO ESCRITORIO FORZADO: Zoom automático
-   ======================================================== */
+/* 1. Reset para evitar desbordamientos */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
 
-/* Esta regla fuerza al cuerpo a tener un ancho fijo de 1200px */
+/* 2. Asegura que el contenedor principal sea flexible */
 body {
-    width: 1200px !important;
-    margin: 0 auto !important;
-    /* 'zoom' es la forma más limpia de escalar sin romper el diseño */
-    zoom: 0.35; 
-    transform-origin: top left;
+    width: 100% !important;
+    overflow-x: hidden;
+}
+
+/* 3. El estilo de PC se mantiene, pero obligamos a los elementos a encogerse */
+@media screen and (max-width: 768px) {
+    /* El logo se ajusta al ancho */
+    .logo-imagen {
+        width: 60px !important;
+        height: auto !important;
+    }
+
+    /* El buscador se vuelve fluido */
+    .busqueda-contenedor-header {
+        width: 60% !important;
+    }
+
+    /* Los botones de navegación se apilan para ser legibles (o se hacen más pequeños) */
+    .nav-header-estatico ul {
+        display: flex;
+        flex-direction: column; /* Apilados para que no se corten */
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Ajuste de tamaño de fuente para que todo sea legible */
+    p, a, span {
+        font-size: 14px !important;
+    }
 }
