@@ -2297,19 +2297,16 @@ main {
 }
 
 /* ========================================================
-   🚀 ESCALADO FORZADO: Mantiene tu diseño de PC intacto
+   🚀 ESCALADO TOTAL DESDE CSS (Sin tocar HTML)
    ======================================================== */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
+    /* 1. Obligamos al cuerpo a mantener un ancho fijo de 1200px */
     body {
-        /* Define un ancho fijo para que el celular no intente reajustar */
-        width: 1200px !important; 
-        
-        /* Escala todo el cuerpo del sitio para que quepa en la pantalla */
+        width: 1200px !important;
+        overflow-x: hidden !important; /* Evita que se mueva a los lados */
         transform-origin: top left;
-        transform: scale(0.45); /* 0.45 es el factor de zoom (45% del tamaño real) */
-        
-        /* Asegura que el resto del espacio se maneje bien */
-        overflow-x: hidden;
+        /* 2. Escalamos todo el cuerpo según el ancho de la pantalla */
+        transform: scale(0.33); 
     }
 }
