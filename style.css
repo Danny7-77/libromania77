@@ -2308,29 +2308,45 @@ body {
     overflow-x: hidden;
 }
 
-/* 3. El estilo de PC se mantiene, pero obligamos a los elementos a encogerse */
-@media screen and (max-width: 768px) {
-    /* El logo se ajusta al ancho */
-    .logo-imagen {
-        width: 60px !important;
-        height: auto !important;
-    }
+/* ========================================================
+   SOLUCIÓN PROFESIONAL: Encabezado Adaptable
+   ======================================================== */
 
-    /* El buscador se vuelve fluido */
-    .busqueda-contenedor-header {
-        width: 60% !important;
-    }
+/* Asegura que el contenedor del encabezado sea flexible */
+.header-top {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important; /* Mantiene todo en una línea */
+    padding: 10px 5px !important;
+}
 
-    /* Los botones de navegación se apilan para ser legibles (o se hacen más pequeños) */
-    .nav-header-estatico ul {
-        display: flex;
-        flex-direction: column; /* Apilados para que no se corten */
-        align-items: center;
-        gap: 5px;
-    }
+/* El logo se ajusta proporcionalmente */
+.logo-imagen {
+    max-width: 60px !important;
+    height: auto !important;
+    flex-shrink: 0 !important; /* No permite que el logo se aplaste */
+}
 
-    /* Ajuste de tamaño de fuente para que todo sea legible */
-    p, a, span {
-        font-size: 14px !important;
-    }
+/* El buscador se vuelve elástico */
+.busqueda-contenedor-header {
+    flex-grow: 1 !important;
+    margin: 0 10px !important;
+    min-width: 0 !important; /* Permite que el buscador se encoja si es necesario */
+}
+
+/* El carrito se mantiene fijo a la derecha */
+.carrito-zona {
+    flex-shrink: 0 !important;
+    font-size: 0.8rem !important; /* Texto un poco más pequeño para que quepa */
+}
+
+/* Los botones naranja también deben estar en fila y no bajarse */
+.nav-header-estatico ul {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 5px !important;
 }
