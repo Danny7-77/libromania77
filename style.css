@@ -2309,44 +2309,46 @@ body {
 }
 
 /* ========================================================
-   SOLUCIÓN PROFESIONAL: Encabezado Adaptable
+   SOLUCIÓN FINAL: Encabezado 100% Fluido
    ======================================================== */
 
-/* Asegura que el contenedor del encabezado sea flexible */
 .header-top {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
-    flex-wrap: nowrap !important; /* Mantiene todo en una línea */
+    width: 100% !important;
     padding: 10px 5px !important;
 }
 
-/* El logo se ajusta proporcionalmente */
+/* 1. El logo: tamaño pequeño fijo para que nunca se desborde */
 .logo-imagen {
-    max-width: 60px !important;
+    width: 50px !important; 
     height: auto !important;
-    flex-shrink: 0 !important; /* No permite que el logo se aplaste */
-}
-
-/* El buscador se vuelve elástico */
-.busqueda-contenedor-header {
-    flex-grow: 1 !important;
-    margin: 0 10px !important;
-    min-width: 0 !important; /* Permite que el buscador se encoja si es necesario */
-}
-
-/* El carrito se mantiene fijo a la derecha */
-.carrito-zona {
     flex-shrink: 0 !important;
-    font-size: 0.8rem !important; /* Texto un poco más pequeño para que quepa */
 }
 
-/* Los botones naranja también deben estar en fila y no bajarse */
+/* 2. El buscador: ajusta su tamaño máximo */
+.busqueda-contenedor-header {
+    flex: 1 !important; /* Toma el espacio disponible */
+    max-width: 45% !important; /* Evita que choque con el carrito */
+    min-width: 100px !important;
+    margin: 0 5px !important;
+}
+
+/* 3. El carrito: texto pequeño para que no se corte */
+.carrito-zona {
+    font-size: 0.75rem !important;
+    flex-shrink: 0 !important;
+    text-align: right !important;
+}
+
+/* 4. Los botones: envolver en vez de romper la línea */
 .nav-header-estatico ul {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    gap: 5px !important;
+    padding: 0 !important;
+    margin-top: 10px !important;
 }
