@@ -379,3 +379,38 @@ document.addEventListener('keydown', function(event) {
         cerrarModalReporte();
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtenemos los elementos del DOM
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("expandedImg");
+  const downloadBtn = document.getElementById("downloadBtn");
+  const closeBtn = document.querySelector(".close-modal");
+  
+  // Seleccionamos todas las miniaturas
+  const thumbnails = document.querySelectorAll(".query-thumbnail");
+
+  // Asignamos el evento click a cada miniatura
+  thumbnails.forEach(img => {
+    img.addEventListener("click", function() {
+      modal.classList.add("show"); // Mostramos el modal
+      modalImg.src = this.src; // Pasamos la imagen clickeada al modal
+      downloadBtn.href = this.src; // Asignamos la ruta al botón de descarga
+    });
+  });
+
+  // Función para cerrar el modal
+  const closeModal = () => {
+    modal.classList.remove("show");
+  };
+
+  // Cerramos al hacer clic en la "X"
+  closeBtn.addEventListener("click", closeModal);
+
+  // Cerramos al hacer clic fuera de la imagen (en el fondo oscuro)
+  modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+});

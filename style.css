@@ -286,6 +286,75 @@ footer {
     border-radius: 10px;
 }
 
+/* --- ESTILO DEL FOOTER (Limpio y claro) --- */
+footer {
+  text-align: center;
+  padding: 50px 20px; /* Más padding para que los logos tengan aire */
+  background-color: #fcfcfc; /* Un fondo muy claro y limpio */
+  color: #333;
+  font-family: sans-serif;
+  border-top: 1px solid #eaeaea;
+}
+
+footer p {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* --- CONTENEDOR FLEXBOX (Alineación perfecta) --- */
+.botones-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio ideal entre logos */
+  flex-wrap: wrap; /* Adaptabilidad móvil */
+}
+
+/* --- ESTILO DE LOS BOTONES-LOGO (Base tridimensional) --- */
+.btn-red {
+  display: flex; /* Necesario para centrar el icono dentro */
+  justify-content: center;
+  align-items: center;
+  width: 55px; /* Tamaño del botón contenedor */
+  height: 55px;
+  border-radius: 50%; /* Hace el botón circular (estilo app) */
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  
+  /* Sombra sólida abajo y difuminada detrás para el efecto 3D */
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- TAMAÑO DEL LOGO INTERNO --- */
+.btn-red i {
+  font-size: 30px; /* Tamaño del logo vectorial dentro del círculo */
+}
+
+/* --- INTERACCIÓN INTERACTIVA (Móvil y PC) --- */
+
+/* Hover: El logo "flota" */
+.btn-red:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.15), 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Active (al tocar/hacer clic): El logo "se presiona" */
+.btn-red:active {
+  transform: translateY(4px); /* Se hunde ocupando el espacio de la sombra */
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* --- COLORES OFICIALES DEL LOGO --- */
+.btn-wa { background-color: #25D366; } /* Verde WhatsApp */
+.btn-fb { background-color: #1877F2; } /* Azul Facebook */
+
+/* Degradado complejo para Instagram */
+.btn-ig { 
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); 
+}
+
 .cerrar {
     position: absolute;
     top: 50px;
@@ -1229,7 +1298,7 @@ main {
     transform: translateX(-50%);
     border-radius: 0; /* Quitamos los bordes redondos para que encaje perfecto en las orillas */
     overflow: hidden; 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.15); 
     margin-bottom: 50px; 
 }
 
@@ -1250,7 +1319,7 @@ main {
     /* Un fondo por si la imagen es muy cuadrada y no logra tocar los bordes */
     background-color: #e4e9f2; 
 }
-
+.carrusel-track img { width: 100%; height: auto; object-fit: cover; display: block; }
 /* Ajuste del carrusel para pantallas de celular */
 @media (max-width: 768px) {
     .carrusel-slide img {
@@ -1576,6 +1645,101 @@ main {
 .consultas p:hover + pre,
 .consultas pre:hover {
     transform: translateY(-3px);
+}
+
+/* Estilo para las miniaturas debajo del código */
+.thumbnail-container {
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 250px; 
+  border: 2px solid #444; 
+}
+
+.query-thumbnail {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.query-thumbnail:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* --- Estilos del Modal (Fondo oscuro) --- */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo negro semitransparente */
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Clase para mostrar el modal usando flexbox */
+.modal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content-wrapper {
+  text-align: center;
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+.modal-content {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+/* Botón de cerrar (X) */
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #bbb;
+}
+
+/* Botón de descarga */
+.download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2ecc71;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #27ae60;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /*==========================
@@ -2204,6 +2368,31 @@ main {
     100% { transform: translateY(0px); }
 }
 
+/* Estilos para el contenedor principal */
+.contenedor-principal {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Estilos para los encabezados de sección */
+.seccion-titulo {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--primario);
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--secundario);
+    padding-bottom: 5px;
+}
+
+/* Estilos para los subtítulos de sección */
+.seccion-subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
 /* =========================================
     7. AJUSTES PARA CELULARES (EL FINAL)
    ========================================= */
@@ -2212,91 +2401,287 @@ main {
     width: 100% !important;
     max-width: 100% !important;
 }
-@media screen and (max-width: 768px) {
-    
-    /* 1. Ajuste del Título Principal - Para que no se corte */
-    header {
-        padding: 3rem 1rem !important; /* Menos espacio arriba y abajo */
-    }
 
-    header h1 {
-        font-size: 2.2rem !important; /* Tamaño nítido que sí cabe en la pantalla */
-        letter-spacing: 1px !important;
-    }
+/* ==========================================
+   RESPONSIVE UNIVERSAL
+   ========================================== */
 
-    .lema {
-        font-size: 1.1rem !important;
-        margin-bottom: 20px !important;
-    }
-
-    /* 2. Buscador e Iconos */
-    .busqueda-contenedor {
-        width: 95% !important;
-        margin-bottom: 20px !important;
-    }
-
-    .header-social-links {
-        gap: 10px !important;
-    }
-
-    /* 3. Menú de Botones - Para que no se amontonen */
-    nav ul {
-        flex-wrap: wrap; /* Si no caben, se bajan solitos */
-        gap: 8px !important;
-    }
-
-    nav a {
-        padding: 6px 12px !important;
-        font-size: 0.7rem !important;
-    }
-
-    /* 4. EL TRUCO DE LOS 3 PRODUCTOS (Corregido con ID #productos) */
-    #productos {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; /* ¡Aquí se activan las 3 columnas! */
-        gap: 5px !important;
-        padding: 10px 5px !important;
-        width: 100% !important;
-    }
-
-    .producto {
-        width: 100% !important;
-        padding: 5px !important;
-        margin: 0 !important;
-    }
-
-    .producto img {
-        height: 70px !important; /* Imagen pequeña para que quepan 3 */
-        object-fit: contain !important;
-    }
-
-    .producto h3 {
-        font-size: 0.6rem !important;
-        height: 30px !important;
-        line-height: 1.1 !important;
-        overflow: hidden !important;
-    }
-
-    .producto p {
-        display: none !important; /* Ocultamos la descripción para que no se desordene */
-    }
-
-    .producto button {
-        font-size: 0.55rem !important;
-        padding: 5px 2px !important;
-        width: 100% !important;
-    }
-
-    /* 5. Otros ajustes */
-    .galeria-evidencias img {
-        width: 100% !important;
-    }
-
-    .tarjeta-contacto {
-    background-color: #f9f9f9; 
-    padding: 40px 20px;
-    border-radius: 15px;
-    text-align: center;
-    color: #333;
-    border: 1px solid #eeeeee;}
+/* Imágenes */
+img {
+    max-width: 100%;
+    height: auto;
 }
+
+/* Contenedores generales */
+.container,
+.contenedor-principal,
+.main-tecnologias-contenedor,
+.main-equipo-contenedor,
+.main-reportes-contenedor,
+.contacto-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header adaptable */
+.header-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Logo adaptable */
+.logo-imagen {
+    width: clamp(70px, 12vw, 150px);
+    height: clamp(70px, 12vw, 150px);
+}
+
+/* Buscador adaptable */
+.busqueda-contenedor-header input {
+    width: min(100%, 300px);
+}
+
+/* Navegación adaptable */
+.nav-header-estatico ul {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Productos */
+#productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.producto {
+    width: 100%;
+}
+
+/* Bloques */
+.bloque-seccion,
+.tarjeta-desarrollador-3d-rect,
+.cuerpo-reporte-layout,
+.seccion-contacto-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Tablas */
+.tabla-base-datos,
+.tabla-reporte-estilizada {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Videos e iframes */
+iframe,
+video {
+    width: 100%;
+    height: auto;
+}
+
+/* Carrusel */
+.carrusel-slide img {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+}
+
+/* Formularios */
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+}
+
+/* Modales */
+.modal-contenido {
+    width: 95%;
+    max-width: 1200px;
+}
+
+/* ==========================
+   TABLETS
+========================== */
+@media (max-width: 1024px){
+
+    .header-container{
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .search-bar{
+        width: 350px;
+    }
+
+    .nav-menu{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .slider-container{
+        width: 95%;
+    }
+}
+
+/* ==========================
+   CELULARES
+========================== */
+@media (max-width: 768px){
+
+    .header-container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .logo img{
+        width: 120px;
+        height: auto;
+    }
+
+    .search-bar{
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .cart{
+        margin-top: 5px;
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-menu a{
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .slider-container{
+        width: 100%;
+    }
+
+    .slide img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ==========================
+   CELULARES PEQUEÑOS
+========================== */
+@media (max-width: 480px){
+
+    .logo img{
+        width: 100px;
+    }
+
+    .search-bar{
+        width: 95%;
+    }
+
+    .nav-menu a{
+        width: 90%;
+        text-align: center;
+    }
+
+    .slide img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Evitar recortes solo en contenedores principales (seguro y específico) */
+.contenedor-principal,
+.bloque-seccion,
+.carrusel-contenedor,
+.columna-texto,
+.columna-imagen,
+.card,
+.page-content {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+/* Asegurar que modales, overlays y carrusel sigan funcionando */
+.modal,
+.modal-visor,
+.carrito-overlay,
+.carrusel-slide,
+.carrusel-contenedor {
+  overflow: visible; /* permite que el contenido interno no se corte */
+}
+
+/* ======= PARCHE MENU RESPONSIVO: evitar scroll horizontal ======= */
+
+/* Asegura que el header pueda crecer en altura cuando la nav se envuelva */
+.header-estatico {
+  box-sizing: border-box;
+  overflow: visible; /* evita recortes que provoquen scroll */
+}
+
+/* Contenedor de navegación: permitir wrap y centrar los botones */
+.nav-3d,
+.nav-header-estatico {
+  display: flex !important;
+  flex-wrap: wrap !important;      /* permite varias filas en pantallas pequeñas */
+  gap: 8px 10px !important;        /* separación vertical y horizontal */
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+  padding: 6px 4px;
+  box-sizing: border-box;
+}
+
+/* Enlaces del menú: evitar que se rompan y reducir padding en móvil */
+.nav-3d a,
+.nav-header-estatico a {
+  white-space: nowrap;             /* evita que el texto se divida en varias líneas */
+  padding: 6px 10px !important;
+  font-size: 0.95rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Evitar que el header provoque scroll horizontal por márgenes o anchos */
+.header-container,
+.header-top {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Si el menú sigue muy ancho, reducir padding de los enlaces en pantallas pequeñas */
+@media (max-width: 480px) {
+  .nav-3d a,
+  .nav-header-estatico a {
+    padding: 6px 8px !important;
+    font-size: 0.9rem;
+  }
+  .busqueda-contenedor-header { max-width: 45%; }
+  .carrito-zona { max-width: 45%; text-align: right; }
+}
+
+/* Evitar overflow horizontal general causado por header */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Asegurar que el primer bloque no quede oculto si el header aumenta su altura */
+header + main > section:first-of-type,
+header + main > .contenedor-principal > section:first-of-type {
+  scroll-margin-top: calc(var(--header-height,72px) + 8px);
+  padding-top: 8px;
+}
+
