@@ -103,23 +103,43 @@
         <h3>SECCION DE CONSULTAS</h3>
         <h3>Consulta 1: Ordenamiento Alfabético de Inventario</h3>
         <p>Organiza todo tu catálogo de productos de la A a la Z. Es ideal para generar listas impresas o vistas rápidas donde sea fácil localizar un artículo visualmente por su nombre.</p>
-        <pre><code>SELECT * FROM PRODUCTO ORDER BY NOMBRE ASC;</code></pre><br>
+        <pre><code>SELECT * FROM PRODUCTO ORDER BY NOMBRE ASC;</code></pre>
+        <div class="thumbnail-container">
+          <img src="img/consulta 1.jpg" alt="Resultado de Consulta 1" class="query-thumbnail">
+        </div>
+        <br>
         
         <h3>Consulta 2: Filtro por Categoría Específica (Electrónicos)</h3>
         <p>Aísla del inventario únicamente los productos tecnológicos (como calculadoras o memorias USB). Ayuda al negocio a auditar secciones específicas de la tienda.</p>
-        <pre><code>SELECT * FROM PRODUCTO WHERE categoria = 'Electrónico';</code></pre><br>
+        <pre><code>SELECT * FROM PRODUCTO WHERE categoria = 'Electrónico';</code></pre>
+        <div class="thumbnail-container">
+  <img src="img/consulta 2.jpg" alt="Resultado de Consulta 1" class="query-thumbnail">
+</div>
+<br>
 
          <h3>Consulta 3: Filtro de Productos de Alto Valor</h3>
         <p>Muestra los artículos premium o más costosos de la librería (cuyo valor supera los Q50.00). Útil para análisis de margen de ganancia o estrategias de seguridad en tienda.</p>
-        <pre><code>SELECT * FROM PRODUCTO WHERE PRECIO > 50.00;</code></pre><br>
+        <pre><code>SELECT * FROM PRODUCTO WHERE PRECIO > 50.00;</code></pre>
+        <div class="thumbnail-container">
+  <img src="img/consulta 3.jpg" alt="Resultado de Consulta 1" class="query-thumbnail">
+</div>
+<br>
 
          <h3>Consulta 4: Alerta de Stock Crítico (Bajo Inventario)</h3>
         <p>Funciona como un sistema de alerta temprana. Te muestra qué productos tienen menos de 10 unidades disponibles para que sepas exactamente qué pedirle a los proveedores antes de quedarte en cero.</p>
-        <pre><code>SELECT * FROM PRODUCTO WHERE STOCK < 10;</code></pre><br>
+        <pre><code>SELECT * FROM PRODUCTO WHERE STOCK < 10;</code></pre>
+        <div class="thumbnail-container">
+  <img src="img/consulta 4.jpg" alt="Resultado de Consulta 1" class="query-thumbnail">
+</div>
+<br>
 
         <h3>Consulta 5: Reporte de Ventas Mensual (Periodo Específico)</h3>
         <p>Extrae el historial de transacciones ocurridas en un rango de fechas específico (en este caso, todo el mes de abril de 2026). Es la consulta clave para hacer cierres de mes y balances financieros.</p>
-        <pre><code>SELECT * FROM VENTA WHERE FECHA BETWEEN '2026-04-01' AND '2026-04-30';</code></pre><br>
+        <pre><code>SELECT * FROM VENTA WHERE FECHA BETWEEN '2026-04-01' AND '2026-04-30';</code></pre>
+        <div class="thumbnail-container">
+  <img src="img/consulta 5.jpg" alt="Resultado de Consulta 1" class="query-thumbnail">
+</div>
+<br>
 
         <h3>Consulta 6: Rendimiento Financiero por Categoría de Producto</h3>
         <p>Suma los ingresos totales generados por cada categoría (Útiles, Libros, Arte, etc.) y los ordena de menor a mayor venta. Le permite al administrador saber cuál sección es la más rentable y cuál se mueve menos.</p>
@@ -127,7 +147,11 @@
                    FROM producto p, detalleventa dv, venta v
                    WHERE p.id = dv.id_producto AND dv.id_venta = v.id
                    GROUP BY p.categoria
-                   ORDER BY total_vendido;</code></pre><br>
+                   ORDER BY total_vendido;</code></pre>
+                   <div class="thumbnail-container">
+  <img src="img/consulta 6.jpg" alt="Resultado de Consulta 1" class="query-thumbnail">
+</div>
+<br>
 
         <h3>Consulta 7: Historial Detallado de Ventas (Auditoría de Clientes)</h3>
         <p>Rompe los códigos y une 4 tablas distintas (VENTA, CLIENTE, DETALLEVENTA y PRODUCTO) usando JOIN para mostrar un reporte legible para humanos: qué número de venta fue, en qué fecha, quién compró, qué artículo se llevó, cuántos y cuánto pagó en total.</p>
@@ -135,14 +159,22 @@
                    FROM VENTA v
                    JOIN CLIENTE c ON v.id_cliente = c.id
                    JOIN DETALLEVENTA dv ON v.id = dv.id_venta
-                   JOIN PRODUCTO p ON dv.id_producto = p.id;</code></pre><br>
+                   JOIN PRODUCTO p ON dv.id_producto = p.id;</code></pre>
+                   <div class="thumbnail-container">
+  <img src="img/consulta 7.jpg" alt="Resultado de Consulta 1" class="query-thumbnail">
+</div>
+<br>
 
         <h3>Consulta 8: Historial de Abastecimiento por Proveedor</h3>
         <p>Cruza la información de las compras de la empresa para mostrar un listado ordenado alfabéticamente por proveedor. Te dice qué mercancía le compraste a cada distribuidor, qué cantidad ingresó a bodega y cuánto le pagaste al negocio proveedor.</p>
         <pre><code>SELECT p.nombre proveedor, pr.nombre producto, dc.cantidad, dc.subtotal
                    FROM compra c, proveedor p, detallecompra dc, producto pr
                    WHERE c.id_proveedor = p.id AND c.id = dc.id_compra AND dc.id_producto = pr.id
-                   ORDER BY p.nombre;</code></pre><br>
+                   ORDER BY p.nombre;</code></pre>
+                   <div class="thumbnail-container">
+  <img src="img/consulta 8.jpg" alt="Resultado de Consulta 1" class="query-thumbnail">
+</div>
+<br>
 
         <h3>Consulta 9: Informe General de Rotación de Inventario e Ingresos</h3>
         <p>Es el reporte maestro del negocio. Muestra producto por producto cuántas unidades totales se han vendido y cuánto dinero han generado. Al usar un LEFT JOIN, incluye mágicamente en la lista incluso a los productos que tienen 0 ventas, permitiendo identificar el "producto hueso" o estancado.</p>
@@ -152,7 +184,11 @@
                    FROM PRODUCTO p
                    LEFT JOIN DETALLEVENTA d ON p.id = d.id_producto
                    GROUP BY p.id, p.nombre, p.categoria
-                   ORDER BY total_unidades_vendidas ASC;</code></pre><br>
+                   ORDER BY total_unidades_vendidas ASC;</code></pre>
+                   <div class="thumbnail-container">
+  <img src="img/consulta 9.jpg" alt="Resultado de Consulta 1" class="query-thumbnail">
+</div>
+<br>
 
         <h3>Diagrama de Flujo y Pseudocódigo</h3><br>
      </div>
@@ -257,8 +293,32 @@
     </div>
     
   <footer>
+    <div class="botones-redes">
+    <a href="https://wa.me/50236589928" target="_blank" class="btn-red btn-wa">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61589715330332" target="_blank" class="btn-red btn-fb">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com/_libromania/?hl=es" target="_blank" class="btn-red btn-ig">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </div><br>
+  
    <p>&copy; 2026 - Libromanía | Proyecto Final UMG - Facultad de Ingeniería en Sistemas</p>
   </footer>
+
+  <div id="imageModal" class="modal">
+  <span class="close-modal">&times;</span>
+  <div class="modal-content-wrapper">
+    <img class="modal-content" id="expandedImg">
+    <a id="downloadBtn" href="#" download="resultado_consulta.jpg" class="download-btn">
+      ⬇️ Descargar Imagen
+    </a>
+  </div>
+</div>
 
     <script src="script.js"></script>
 </body>
